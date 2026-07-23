@@ -1,0 +1,226 @@
+[
+  {
+    "id": "C001",
+    "especialidad": "Medicina Familiar",
+    "tema": "Diabetes mellitus tipo 2",
+    "guia_origen": "GPC Diagnóstico y tratamiento de la diabetes mellitus tipo 2 en el primer nivel de atención (IMSS-718-14), criterios diagnósticos ADA adoptados",
+    "tipo": "seriado",
+    "vineta": "Mujer de 52 años, sin antecedentes patológicos conocidos, acude a consulta por poliuria y polidipsia de tres meses de evolución, con pérdida de 6 kg de peso no intencional. Su madre tiene diabetes. IMC 31.4 kg/m2, TA 128/78 mmHg. En laboratorio de rutina se reporta glucosa plasmática en ayuno de 168 mg/dL. Se repite el estudio una semana después y se obtiene glucosa en ayuno de 154 mg/dL y HbA1c de 8.1%. La creatinina sérica es de 0.8 mg/dL y el examen general de orina no muestra cetonas.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es el diagnóstico que corresponde a esta paciente?",
+        "opciones": [
+          "Glucosa alterada en ayuno",
+          "Intolerancia a los carbohidratos",
+          "Diabetes mellitus tipo 2",
+          "Diabetes mellitus tipo 1 de inicio tardío"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "Dos determinaciones de glucosa en ayuno iguales o mayores a 126 mg/dL en días distintos, más una HbA1c de 6.5% o más, confirman diabetes mellitus. La glucosa alterada en ayuno corresponde a valores de 100 a 125 mg/dL y la intolerancia a los carbohidratos se define por la curva de tolerancia a las 2 horas entre 140 y 199 mg/dL, cifras que la paciente rebasa. La diabetes tipo 1 se descarta por la ausencia de cetosis, la edad y el fenotipo con obesidad.",
+        "nivel": "diagnostico"
+      },
+      {
+        "enunciado": "Además de las modificaciones al estilo de vida, ¿cuál es el tratamiento farmacológico inicial indicado?",
+        "opciones": [
+          "Metformina 500 mg cada 12 horas con incremento gradual",
+          "Glibenclamida 5 mg cada 24 horas",
+          "Insulina glargina nocturna",
+          "Diferir el fármaco y revalorar en tres meses"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "La metformina es el fármaco de primera línea al momento del diagnóstico, salvo contraindicación por filtrado glomerular bajo, situación que aquí no existe. Se inicia a dosis baja y se escala para reducir la intolerancia gastrointestinal. La glibenclamida es de segunda línea por el riesgo de hipoglucemia y ganancia de peso; la insulina se reserva para HbA1c mayor de 9% con síntomas catabólicos marcados o descompensación aguda; y diferir el tratamiento retrasa el control metabólico en una paciente ya sintomática.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C002",
+    "especialidad": "Ginecología y Obstetricia",
+    "tema": "Preeclampsia",
+    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la preeclampsia en segundo y tercer nivel de atención (IMSS-020-08), criterios de severidad y neuroprofilaxis",
+    "tipo": "seriado",
+    "vineta": "Primigesta de 24 años con embarazo de 34.2 semanas por fecha de última regla confiable. Acude por cefalea frontal persistente de 12 horas y fosfenos. TA 168/112 mmHg en dos tomas separadas por 15 minutos, con reposo previo. Hay edema de miembros inferiores +++ e hiperreflexia rotuliana. Laboratorio: plaquetas 118 000/mm3, AST 78 U/L, ALT 84 U/L, creatinina 0.9 mg/dL, proteinuria en tira reactiva +++. La frecuencia cardiaca fetal es de 142 lpm.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es el diagnóstico más probable?",
+        "opciones": [
+          "Hipertensión gestacional",
+          "Preeclampsia sin datos de severidad",
+          "Hipertensión crónica con embarazo",
+          "Preeclampsia con datos de severidad"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La paciente cumple con hipertensión de 160/110 mmHg o más después de la semana 20, proteinuria, y además presenta datos de severidad: síntomas neurológicos, trombocitopenia por debajo de 150 000 y elevación de transaminasas al doble del valor normal. La hipertensión gestacional se descarta porque hay proteinuria y afectación orgánica; la preeclampsia sin datos de severidad no cursa con estas cifras tensionales ni con alteración de laboratorio; y la hipertensión crónica requeriría cifras elevadas antes de la semana 20.",
+        "nivel": "diagnostico"
+      },
+      {
+        "enunciado": "¿Cuál es la conducta inmediata prioritaria en el servicio de urgencias?",
+        "opciones": [
+          "Iniciar sulfato de magnesio y antihipertensivo, con interrupción del embarazo una vez estabilizada",
+          "Administrar esquema de maduración pulmonar y egresar con manejo ambulatorio",
+          "Iniciar diurético de asa para reducir el edema y la presión arterial",
+          "Realizar cesárea de urgencia sin manejo antihipertensivo previo"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "En preeclampsia con datos de severidad la prioridad es prevenir la eclampsia con sulfato de magnesio y controlar la crisis hipertensiva con un antihipertensivo de acción rápida, para después resolver el embarazo, que es el tratamiento definitivo. El manejo ambulatorio está contraindicado ante datos de severidad. Los diuréticos no tienen indicación porque la paciente cursa con depleción del volumen intravascular. Operar sin controlar antes la presión arterial expone a la madre a un evento vascular cerebral durante el procedimiento.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C003",
+    "especialidad": "Cirugía General",
+    "tema": "Apendicitis aguda",
+    "guia_origen": "GPC Diagnóstico de apendicitis aguda (IMSS-031-08), escala de Alvarado y criterios de tratamiento quirúrgico",
+    "tipo": "unico",
+    "vineta": "Hombre de 21 años, previamente sano, con dolor abdominal de 18 horas de evolución que inició en el epigastrio y migró a la fosa iliaca derecha. Refiere náusea, dos vómitos y anorexia. Temperatura 38.1 °C, FC 98 lpm. A la exploración presenta dolor a la palpación en el punto de McBurney con rebote positivo. Biometría hemática con leucocitos de 14 800/mm3 y 82% de neutrófilos. El examen general de orina es normal.",
+    "reactivos": [
+      {
+        "enunciado": "Con una escala de Alvarado de 9 puntos, ¿cuál es la conducta indicada?",
+        "opciones": [
+          "Observación hospitalaria por 24 horas con analgésico y revaloración",
+          "Tomografía abdominal contrastada antes de tomar cualquier decisión",
+          "Manejo conservador con antibiótico intravenoso y sin cirugía",
+          "Apendicectomía, con antibiótico profiláctico prequirúrgico"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "Una puntuación de Alvarado de 7 o más tiene alta probabilidad de apendicitis y justifica la intervención quirúrgica sin estudios adicionales. La observación prolongada aumenta el riesgo de perforación en un cuadro ya florido. La tomografía se reserva para casos con puntuación intermedia o presentación atípica, sobre todo en mujeres en edad fértil y adultos mayores. El manejo conservador solo con antibiótico no es el estándar en el paciente con cuadro clásico no complicado y disponibilidad quirúrgica.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C004",
+    "especialidad": "Medicina Interna",
+    "tema": "Neumonía adquirida en la comunidad",
+    "guia_origen": "GPC Diagnóstico y tratamiento de la neumonía adquirida en la comunidad en adultos (IMSS-234-09), escala CURB-65",
+    "tipo": "seriado",
+    "vineta": "Hombre de 71 años con tabaquismo suspendido hace 10 años, llevado a urgencias por fiebre de 38.8 °C, tos con expectoración herrumbrosa y disnea de cuatro días. Se encuentra desorientado en tiempo. TA 88/56 mmHg, FC 112 lpm, FR 32 rpm, saturación 88% al aire ambiente. A la auscultación hay estertores crepitantes en la base derecha. Laboratorio: urea 62 mg/dL, leucocitos 18 200/mm3. La radiografía de tórax muestra consolidación del lóbulo inferior derecho.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la escala CURB-65, ¿qué puntuación tiene el paciente y qué implica?",
+        "opciones": [
+          "2 puntos, manejo ambulatorio con seguimiento estrecho",
+          "5 puntos, mortalidad elevada con indicación de terapia intensiva",
+          "3 puntos, hospitalización en piso de medicina interna",
+          "1 punto, tratamiento en casa con antibiótico oral"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "El paciente suma los cinco criterios: confusión, urea mayor de 42 mg/dL, frecuencia respiratoria de 30 rpm o más, presión sistólica menor de 90 o diastólica de 60 mmHg o menos, y edad de 65 años o más. Una puntuación de 3 o más obliga a hospitalizar, y de 4 a 5 puntos indica valorar la unidad de cuidados intensivos por la mortalidad asociada. Cualquier opción que proponga manejo ambulatorio ignora la inestabilidad hemodinámica y la hipoxemia que ya presenta.",
+        "nivel": "diagnostico"
+      },
+      {
+        "enunciado": "¿Cuál es la medida de mayor impacto para prevenir un nuevo episodio una vez resuelto el cuadro?",
+        "opciones": [
+          "Antibiótico profiláctico continuo por seis meses",
+          "Radiografía de tórax de control cada mes durante un año",
+          "Vacunación antineumocócica y contra influenza",
+          "Suplementación con vitamina C a dosis altas"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "En el adulto mayor la vacunación antineumocócica y la vacuna anual contra influenza son las intervenciones preventivas con evidencia de reducción de hospitalización y mortalidad por neumonía. La profilaxis antibiótica prolongada no está indicada y favorece resistencia bacteriana. La radiografía de control seriada solo se justifica ante sospecha de neoplasia o falta de resolución clínica. La vitamina C no ha demostrado prevenir la neumonía en esta población.",
+        "nivel": "prevencion"
+      }
+    ]
+  },
+  {
+    "id": "C005",
+    "especialidad": "Medicina Interna",
+    "tema": "Cetoacidosis diabética",
+    "guia_origen": "GPC Diagnóstico y tratamiento de la cetoacidosis diabética en el adulto (IMSS-388-10), fase inicial de reanimación",
+    "tipo": "unico",
+    "vineta": "Mujer de 19 años con diabetes tipo 1 de cinco años de evolución, que suspendió la insulina hace tres días. Llega a urgencias con vómito, dolor abdominal y respiración profunda y rápida. TA 92/58 mmHg, FC 124 lpm, FR 28 rpm, mucosas secas. Laboratorio: glucosa 486 mg/dL, pH 7.09, bicarbonato 7 mEq/L, anión gap 28, cetonas séricas positivas, sodio 132 mEq/L y potasio 3.1 mEq/L.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es la conducta inicial correcta antes de iniciar la infusión de insulina?",
+        "opciones": [
+          "Administrar bicarbonato de sodio en bolo para corregir la acidosis",
+          "Iniciar insulina rápida en bolo sin esperar resultados adicionales",
+          "Restringir líquidos para evitar edema cerebral",
+          "Reponer volumen con solución salina y corregir el potasio antes de la insulina"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "Con potasio sérico menor de 3.3 mEq/L la insulina debe posponerse hasta reponer potasio, porque la insulina lo introduce a la célula y puede desencadenar una arritmia mortal. Simultáneamente se inicia la reposición de volumen con solución salina isotónica. El bicarbonato solo se considera con pH menor de 6.9 y no en este caso. Aplicar insulina de inmediato con hipokalemia es el error que más muertes evitables produce en este escenario. Restringir líquidos empeora el estado de choque hipovolémico.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C006",
+    "especialidad": "Ginecología y Obstetricia",
+    "tema": "Infección urinaria en el embarazo",
+    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la infección del tracto urinario bajo durante el embarazo (IMSS-078-08), tamizaje de bacteriuria asintomática",
+    "tipo": "unico",
+    "vineta": "Mujer de 27 años con embarazo de 15 semanas, asintomática, acude a su control prenatal de rutina. No refiere disuria, urgencia ni dolor lumbar. La exploración física es normal, sin dolor a la puñopercusión. Se le solicitó urocultivo de tamizaje, que reporta desarrollo de Escherichia coli con 120 000 UFC/mL, sensible a nitrofurantoína, amoxicilina y cefalexina. El examen general de orina muestra nitritos positivos y 12 leucocitos por campo.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es la conducta indicada en esta paciente?",
+        "opciones": [
+          "Tratar con antibiótico según sensibilidad y repetir urocultivo de control",
+          "No tratar por estar asintomática y repetir el urocultivo en el tercer trimestre",
+          "Iniciar ciprofloxacino por siete días",
+          "Indicar únicamente aumento de la ingesta de líquidos y arándano"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "La bacteriuria asintomática en el embarazo, definida por 100 000 UFC/mL o más de un solo germen, siempre se trata, porque hasta un tercio de las pacientes progresa a pielonefritis con riesgo de parto pretérmino y bajo peso al nacer. Después del tratamiento se requiere urocultivo de control para confirmar la erradicación. Las quinolonas están contraindicadas en el embarazo por el daño al cartílago fetal. Las medidas higiénicas por sí solas no erradican la bacteriuria.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C007",
+    "especialidad": "Pediatría",
+    "tema": "Enfermedad diarreica aguda en pediatría",
+    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la diarrea aguda en niños de dos meses a cinco años (IMSS-156-08), planes de hidratación",
+    "tipo": "unico",
+    "vineta": "Lactante de 14 meses, con peso de 9.5 kg, llevado por diarrea líquida sin sangre, ocho evacuaciones en las últimas 24 horas, y vómito en dos ocasiones. Se encuentra irritable pero bebe con avidez cuando se le ofrece líquido. Tiene ojos hundidos, mucosa oral seca y el signo del pliegue cutáneo desaparece en menos de dos segundos. Llenado capilar de 2 segundos, FC 138 lpm, sin fiebre. Diuresis disminuida referida por la madre.",
+    "reactivos": [
+      {
+        "enunciado": "¿Qué grado de deshidratación tiene y cuál es el plan de hidratación correspondiente?",
+        "opciones": [
+          "Sin deshidratación, plan A en el domicilio",
+          "Deshidratación con choque, plan C con carga intravenosa inmediata",
+          "Deshidratación moderada, plan B con vida suero oral en la unidad de salud",
+          "Deshidratación grave, ayuno absoluto e hidratación parenteral exclusiva"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "La irritabilidad, la sed intensa, los ojos hundidos y el pliegue cutáneo que retorna con lentitud corresponden a deshidratación moderada, que se maneja con plan B: vida suero oral bajo supervisión en la unidad de salud, con reevaluación a las cuatro horas. El plan A aplica a niños sin datos de deshidratación. El plan C se reserva para el paciente con estado de choque o incapacidad para la vía oral, situación que aquí no ocurre porque el niño bebe con avidez. El ayuno está contraindicado: la alimentación debe continuar.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C008",
+    "especialidad": "Medicina Interna",
+    "tema": "Síndrome coronario agudo con elevación del ST",
+    "guia_origen": "GPC Diagnóstico y tratamiento del infarto agudo del miocardio con elevación del segmento ST (IMSS-357-13), estrategias de reperfusión y tiempos",
+    "tipo": "seriado",
+    "vineta": "Hombre de 58 años, hipertenso y fumador, con dolor retroesternal opresivo de 90 minutos de evolución, irradiado a mandíbula y brazo izquierdo, acompañado de diaforesis y náusea. TA 138/86 mmHg, FC 92 lpm, sin datos de insuficiencia cardiaca. El electrocardiograma muestra elevación del segmento ST de 3 mm en las derivaciones DII, DIII y aVF, con descenso especular en DI y aVL. La unidad se encuentra en un hospital sin sala de hemodinamia, y el centro con angioplastia primaria está a 3 horas de traslado.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es la localización del infarto según el electrocardiograma?",
+        "opciones": [
+          "Anterior extenso",
+          "Lateral alto",
+          "Septal",
+          "Inferior"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La elevación del segmento ST en DII, DIII y aVF corresponde a la cara inferior, irrigada habitualmente por la arteria coronaria derecha, y el descenso especular en DI y aVL confirma el patrón. La cara anterior se expresa en V1 a V6, la lateral alta en DI y aVL, y la septal en V1 y V2. Ante un infarto inferior conviene además registrar derivaciones derechas para descartar extensión al ventrículo derecho, lo que cambia el manejo de líquidos y contraindica los nitratos.",
+        "nivel": "diagnostico"
+      },
+      {
+        "enunciado": "¿Cuál es la estrategia de reperfusión indicada en este contexto?",
+        "opciones": [
+          "Trombólisis inmediata en la unidad, con traslado posterior a un centro con hemodinamia",
+          "Trasladar para angioplastia primaria aunque el tiempo exceda las 3 horas",
+          "Manejo solo con antiagregación y anticoagulación, sin reperfusión",
+          "Esperar la elevación de troponinas antes de decidir cualquier reperfusión"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "Cuando no es posible realizar angioplastia primaria dentro de los primeros 120 minutos desde el primer contacto médico, y el paciente tiene menos de 12 horas de evolución sin contraindicaciones, la trombólisis es la estrategia indicada, seguida de traslado a un centro con hemodinamia para angiografía. Trasladar sin reperfundir con un tiempo de 3 horas pierde miocardio viable. Omitir la reperfusión aumenta la mortalidad. Esperar troponinas retrasa el tratamiento en un paciente cuyo electrocardiograma ya es diagnóstico.",
+        "nivel": "tratamiento"
+      }
+    ]
+  }
+]
