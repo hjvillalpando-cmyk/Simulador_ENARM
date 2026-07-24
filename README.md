@@ -39,6 +39,14 @@ Se abre en `http://localhost:8501`.
 **Acceso docente inicial:** usuario `DOC001`, contraseña `cambiar123`.
 Cámbiala en la pestaña Administración antes de compartir la liga.
 
+Si olvidas la contraseña, o si cambiaste `DOCENTE_PASSWORD_INICIAL` después
+de que la cuenta ya existía (en ese caso el valor nuevo no se aplica solo),
+restablécela con:
+
+```bash
+python restablecer_clave.py
+```
+
 ---
 
 ## El banco de casos
@@ -121,6 +129,7 @@ entorno:
 | `motor_examen.py` | Selección de casos, barajado de opciones, calificación |
 | `reportes.py` | PDF individual y Excel grupal |
 | `validar_banco.py` | Revisión del banco desde la terminal |
+| `restablecer_clave.py` | Restablece la contraseña del docente |
 | `casos.json` | Banco de casos (8 de ejemplo, reemplázalos) |
 | `PROMPT_BANCO.md` | Cómo generar tus 100 casos desde las guías |
 

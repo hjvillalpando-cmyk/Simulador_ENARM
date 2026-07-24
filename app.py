@@ -4,12 +4,15 @@ Simulador de casos clínicos ENARM — aplicación Streamlit.
 Ejecutar con:  streamlit run app.py
 """
 
+import html
 import json
 import time
 
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+import estilos
 
 from auth import (
     cambiar_password_docente,
@@ -33,10 +36,8 @@ from motor_examen import (
 )
 from reportes import generar_excel_grupo, generar_pdf_sesion
 
-VERDE = "#1f9d55"
-ROJO = "#d64545"
-
 st.set_page_config(page_title=TITULO_APP, page_icon="🩺", layout="wide")
+st.markdown(estilos.CSS, unsafe_allow_html=True)
 
 init_db()
 
@@ -69,8 +70,8 @@ _estado_inicial()
 # Acceso
 # --------------------------------------------------------------------------- #
 def pantalla_acceso():
-    st.title(f"🩺 {TITULO_APP}")
-    st.caption(NOMBRE_INSTITUCION)
+    st.markdown(estilos.encabezado(f"🩺 {TITULO_APP}", NOMBRE_INSTITUCION),
+                unsafe_allow_html=True)
 
     tab_alumno, tab_docente = st.tabs(["Alumnos", "Docente"])
 
@@ -126,8 +127,13 @@ def pantalla_acceso():
 # --------------------------------------------------------------------------- #
 def pantalla_inicio_alumno():
     usuario = st.session_state["usuario"]
-    st.title(f"Hola, {usuario['nombre'].title()}")
-    st.caption(f"Matrícula {usuario['matricula']}")
+    st.markdown(
+        estilos.encabezado(
+            f"Hola, {usuario['nombre'].title()}",
+            f"Matrícula {usuario['matricula']}",
+        ),
+        unsafe_allow_html=True,
+    )
 
     col_izq, col_der = st.columns([3, 2])
 
@@ -242,21 +248,27 @@ def pantalla_examen():
             finalizar_examen()
 
     # Encabezado del caso
-    st.caption(
-        f"Caso {item['num_caso']} de {item['total_casos']}   ·   "
-        f"Reactivo {item['reactivo_num']} de {item['reactivos_en_caso']} de este caso   ·   "
-        f"{item['especialidad']}"
+    st.markdown(
+        estilos.chip_tema(item["tema"])
+        + estilos.chip_nivel(item["nivel"])
+        + f"<span class='pista'>{html.escape(item['especialidad'])}</span>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f"<div class='pista' style='margin:10px 0 4px'>Caso {item['num_caso']} de "
+        f"{item['total_casos']} · reactivo {item['reactivo_num']} de "
+        f"{item['reactivos_en_caso']} de este caso</div>",
+        unsafe_allow_html=True,
     )
     st.progress((idx + 1) / total, text=f"Reactivo {idx + 1} de {total}")
 
-    st.markdown("#### Caso clínico")
+    st.markdown(estilos.vineta(item["vineta"]), unsafe_allow_html=True)
+    st.write("")
     st.markdown(
-        f"<div style='background:#f5f7fa;border-left:4px solid #4a6fa5;"
-        f"padding:14px 18px;border-radius:4px;line-height:1.6'>{item['vineta']}</div>",
+        f"<div style='font-size:1.1rem;font-weight:700;color:{estilos.TINTA};"
+        f"margin-bottom:6px'>{html.escape(item['enunciado'])}</div>",
         unsafe_allow_html=True,
     )
-    st.write("")
-    st.markdown(f"**{item['enunciado']}**")
 
     letras = ["A", "B", "C", "D"]
     valor_previo = examen["respuestas"][idx]
@@ -352,6 +364,7 @@ def finalizar_examen():
 # Resultados
 # --------------------------------------------------------------------------- #
 def _grafica_desglose(datos: dict, titulo: str):
+    """Barras apiladas de aciertos y errores por categoría."""
     filas = []
     for clave, d in datos.items():
         filas.append({"Categoría": clave, "Resultado": "Correcto", "Reactivos": d["aciertos"]})
@@ -361,10 +374,182 @@ def _grafica_desglose(datos: dict, titulo: str):
     df = pd.DataFrame(filas)
     fig = px.bar(
         df, x="Categoría", y="Reactivos", color="Resultado", barmode="stack",
-        color_discrete_map={"Correcto": VERDE, "Incorrecto": ROJO}, title=titulo,
+        color_discrete_map={"Correcto": estilos.VERDE, "Incorrecto": estilos.ROJO},
+        title=titulo,
     )
-    fig.update_layout(height=340, margin=dict(l=0, r=0, t=40, b=0), xaxis_title="")
+    fig.update_layout(
+        height=340, margin=dict(l=0, r=0, t=44, b=0), xaxis_title="",
+        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+        legend=dict(orientation="h", y=-0.18, title=""),
+    )
     return fig
+
+
+def _estado_reactivo(item: dict, elegida: str | None) -> str:
+    """Clasifica el resultado de un reactivo."""
+    if elegida is None:
+        return "sin_contestar"
+    return "correcta" if elegida == item["letra_correcta"] else "incorrecta"
+
+
+# --- Tarjetas de repaso ----------------------------------------------------- #
+def _tarjetas_filtradas(items, respuestas, filtro: str) -> list[int]:
+    """Índices de los reactivos que entran en el filtro elegido."""
+    indices = []
+    for i, item in enumerate(items):
+        estado = _estado_reactivo(item, respuestas[i])
+        if filtro == "Solo las que fallé" and estado == "correcta":
+            continue
+        if filtro == "Solo las que acerté" and estado != "correcta":
+            continue
+        indices.append(i)
+    return indices
+
+
+def repaso_con_tarjetas(items, respuestas):
+    """Repaso tipo flash card: primero la pregunta, luego la respuesta."""
+    st.session_state.setdefault("flash_i", 0)
+    st.session_state.setdefault("flash_ver", False)
+    st.session_state.setdefault("flash_filtro", "Todas")
+
+    filtro = st.radio(
+        "Mostrar",
+        ["Todas", "Solo las que fallé", "Solo las que acerté"],
+        horizontal=True,
+        key="flash_filtro",
+        label_visibility="collapsed",
+    )
+
+    if st.session_state.get("_flash_filtro_previo") != filtro:
+        st.session_state["_flash_filtro_previo"] = filtro
+        st.session_state["flash_i"] = 0
+        st.session_state["flash_ver"] = False
+
+    indices = _tarjetas_filtradas(items, respuestas, filtro)
+    if not indices:
+        st.success("No hay tarjetas en este filtro. ¡Contestaste todo bien!")
+        return
+
+    # Si el filtro cambió y el índice se salió de rango, se reinicia.
+    if st.session_state["flash_i"] >= len(indices):
+        st.session_state["flash_i"] = 0
+
+    pos = st.session_state["flash_i"]
+    i = indices[pos]
+    item = items[i]
+    elegida = respuestas[i]
+    correcta = item["letra_correcta"]
+    estado = _estado_reactivo(item, elegida)
+    letras = ["A", "B", "C", "D"]
+
+    st.markdown(
+        f"<div class='pista'>Tarjeta {pos + 1} de {len(indices)} · "
+        f"Caso {item['num_caso']}</div>",
+        unsafe_allow_html=True,
+    )
+    st.progress((pos + 1) / len(indices))
+
+    # --- Cara frontal: el caso y la pregunta ---
+    cuerpo = (
+        estilos.chip_tema(item["tema"])
+        + estilos.chip_nivel(item["nivel"])
+        + f"<div style='margin-top:16px' class='texto'>{html.escape(item['vineta'])}</div>"
+        + f"<div class='pregunta'>{html.escape(item['enunciado'])}</div>"
+    )
+
+    if not st.session_state["flash_ver"]:
+        # Aún no se revela: las opciones se ven neutras, para volver a pensarla.
+        for k, texto in enumerate(item["opciones"]):
+            cuerpo += estilos.opcion(letras[k], texto)
+        cuerpo += (
+            "<div class='fuente'>Piensa tu respuesta y voltea la tarjeta "
+            "para comprobarla.</div>"
+        )
+    else:
+        # --- Cara posterior: la respuesta y el porqué ---
+        cuerpo += estilos.veredicto(estado) + "<div style='height:10px'></div>"
+        for k, texto in enumerate(item["opciones"]):
+            letra = letras[k]
+            if letra == correcta:
+                marca = "correcta"
+            elif letra == elegida:
+                marca = "elegida_mal"
+            else:
+                marca = "neutro"
+            cuerpo += estilos.opcion(letra, texto, marca)
+        if estado == "sin_contestar":
+            cuerpo += (
+                f"<div style='color:{estilos.AMBAR};font-size:.88rem;margin:6px 0'>"
+                "Dejaste este reactivo en blanco.</div>"
+            )
+        cuerpo += (
+            "<div style='height:12px'></div>"
+            f"<div class='bloque-retro'>{html.escape(item['retroalimentacion'])}</div>"
+            f"<div class='fuente'>Fuente: {html.escape(item['guia_origen'])}</div>"
+        )
+
+    st.markdown(f"<div class='tarjeta'>{cuerpo}</div>", unsafe_allow_html=True)
+    st.write("")
+
+    c1, c2, c3 = st.columns([1, 1.6, 1])
+    with c1:
+        if st.button("← Anterior", use_container_width=True, disabled=pos == 0):
+            st.session_state["flash_i"] -= 1
+            st.session_state["flash_ver"] = False
+            st.rerun()
+    with c2:
+        etiqueta = "Ocultar respuesta" if st.session_state["flash_ver"] else "Ver respuesta"
+        if st.button(etiqueta, type="primary", use_container_width=True):
+            st.session_state["flash_ver"] = not st.session_state["flash_ver"]
+            st.rerun()
+    with c3:
+        ultima = pos == len(indices) - 1
+        if st.button("Siguiente →", use_container_width=True, disabled=ultima):
+            st.session_state["flash_i"] += 1
+            st.session_state["flash_ver"] = False
+            st.rerun()
+
+    if pos == len(indices) - 1 and st.session_state["flash_ver"]:
+        st.success("Terminaste el repaso de esta sesión.")
+
+
+def lista_completa(items, respuestas):
+    """Vista compacta: todos los reactivos en acordeón."""
+    letras = ["A", "B", "C", "D"]
+    caso_actual = None
+
+    for i, item in enumerate(items):
+        if item["caso_id"] != caso_actual:
+            caso_actual = item["caso_id"]
+            st.markdown(
+                f"<div style='margin:18px 0 8px'>{estilos.chip_tema(item['tema'])}"
+                f"<span style='color:{estilos.GRIS};font-size:.85rem'>"
+                f"Caso {item['num_caso']}</span></div>",
+                unsafe_allow_html=True,
+            )
+
+        elegida = respuestas[i]
+        estado = _estado_reactivo(item, elegida)
+        icono = {"correcta": "✅", "incorrecta": "❌", "sin_contestar": "⬜"}[estado]
+
+        with st.expander(f"{icono}  {item['enunciado']}"):
+            st.markdown(estilos.vineta(item["vineta"]), unsafe_allow_html=True)
+            st.write("")
+            bloque = ""
+            for k, texto in enumerate(item["opciones"]):
+                letra = letras[k]
+                if letra == item["letra_correcta"]:
+                    marca = "correcta"
+                elif letra == elegida:
+                    marca = "elegida_mal"
+                else:
+                    marca = "neutro"
+                bloque += estilos.opcion(letra, texto, marca)
+            bloque += (
+                f"<div class='bloque-retro'>{html.escape(item['retroalimentacion'])}</div>"
+            )
+            st.markdown(bloque, unsafe_allow_html=True)
+            st.caption(f"Fuente: {item['guia_origen']} · {estilos.ETIQUETA_NIVEL.get(item['nivel'], item['nivel'])}")
 
 
 def pantalla_resultados():
@@ -374,55 +559,75 @@ def pantalla_resultados():
     items = res["items"]
     respuestas = res["respuestas"]
 
-    st.title("Resultados de la sesión")
+    st.markdown(
+        estilos.encabezado(
+            "Resultados de la sesión",
+            f"{usuario['nombre'].title()} · {res['fecha']}",
+        ),
+        unsafe_allow_html=True,
+    )
 
-    c1, c2, c3 = st.columns(3)
-    c1.metric("Calificación", f"{resumen['puntaje']:.1f}%")
-    c2.metric("Aciertos", f"{resumen['aciertos']} de {resumen['total']}")
-    c3.metric("Sin contestar", resumen["sin_contestar"])
+    c_marc, c_datos = st.columns([1, 2])
+    with c_marc:
+        st.markdown(
+            estilos.marcador(resumen["puntaje"], resumen["aciertos"], resumen["total"]),
+            unsafe_allow_html=True,
+        )
+    with c_datos:
+        d1, d2, d3 = st.columns(3)
+        d1.metric("Casos", len({i["caso_id"] for i in items}))
+        d2.metric("Reactivos", resumen["total"])
+        d3.metric("Sin contestar", resumen["sin_contestar"])
 
-    # Temas que necesitan repaso
-    debiles = [
-        t for t, d in resumen["por_tema"].items() if d["aciertos"] / d["total"] < 0.6
-    ]
-    if debiles:
-        st.warning("Temas para repasar: " + ", ".join(sorted(debiles)))
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.plotly_chart(_grafica_desglose(resumen["por_tema"], "Por tema"),
-                        use_container_width=True)
-    with col2:
-        niveles = {k.capitalize(): v for k, v in resumen["por_nivel"].items()}
-        st.plotly_chart(_grafica_desglose(niveles, "Por nivel clínico"),
-                        use_container_width=True)
-
-    st.subheader("Retroalimentación reactivo por reactivo")
-    letras = ["A", "B", "C", "D"]
-    caso_actual = None
-
-    for i, item in enumerate(items):
-        if item["caso_id"] != caso_actual:
-            caso_actual = item["caso_id"]
-            st.markdown(f"**Caso {item['num_caso']} · {item['tema']}**")
-
-        elegida = respuestas[i]
-        correcta = item["letra_correcta"]
-        acerto = elegida == correcta
-        icono = "✅" if acerto else ("⬜" if elegida is None else "❌")
-
-        with st.expander(f"{icono}  {item['enunciado']}"):
-            st.markdown(f"*{item['vineta']}*")
-            if elegida is None:
-                st.write("**Tu respuesta:** no contestaste")
-            else:
-                st.write(f"**Tu respuesta:** {elegida}) {item['opciones'][letras.index(elegida)]}")
-            st.write(
-                f"**Respuesta correcta:** {correcta}) "
-                f"{item['opciones'][letras.index(correcta)]}"
+        debiles = sorted(
+            t for t, d in resumen["por_tema"].items() if d["aciertos"] / d["total"] < 0.6
+        )
+        fuertes = sorted(
+            t for t, d in resumen["por_tema"].items() if d["aciertos"] / d["total"] == 1.0
+        )
+        if debiles:
+            st.markdown(
+                "**Para repasar:** "
+                + " ".join(estilos.chip(t, estilos.ROJO, estilos.ROJO_FONDO) for t in debiles),
+                unsafe_allow_html=True,
             )
-            st.info(item["retroalimentacion"])
-            st.caption(f"Fuente: {item['guia_origen']} · Nivel: {item['nivel']}")
+        if fuertes:
+            st.markdown(
+                "**Dominados:** "
+                + " ".join(estilos.chip(t, estilos.VERDE, estilos.VERDE_FONDO) for t in fuertes),
+                unsafe_allow_html=True,
+            )
+
+    st.write("")
+    t_tarjetas, t_graficas, t_lista = st.tabs(
+        ["Tarjetas de repaso", "Tu desempeño", "Lista completa"]
+    )
+
+    with t_tarjetas:
+        st.caption(
+            "Vuelve a pensar cada caso antes de voltear la tarjeta. "
+            "Es la parte que de verdad hace que se te quede."
+        )
+        repaso_con_tarjetas(items, respuestas)
+
+    with t_graficas:
+        col1, col2 = st.columns(2)
+        with col1:
+            st.plotly_chart(
+                _grafica_desglose(resumen["por_tema"], "Por tema"),
+                use_container_width=True,
+            )
+        with col2:
+            niveles = {
+                estilos.ETIQUETA_NIVEL.get(k, k): v for k, v in resumen["por_nivel"].items()
+            }
+            st.plotly_chart(
+                _grafica_desglose(niveles, "Por nivel clínico"),
+                use_container_width=True,
+            )
+
+    with t_lista:
+        lista_completa(items, respuestas)
 
     st.divider()
     pdf_bytes = generar_pdf_sesion(
@@ -434,7 +639,7 @@ def pantalla_resultados():
         respuestas=respuestas,
         fecha=res["fecha"],
     )
-    c_pdf, c_volver = st.columns([1, 1])
+    c_pdf, c_volver = st.columns(2)
     c_pdf.download_button(
         "Descargar informe en PDF",
         data=pdf_bytes,
@@ -442,7 +647,9 @@ def pantalla_resultados():
         mime="application/pdf",
         use_container_width=True,
     )
-    if c_volver.button("Volver al inicio", use_container_width=True):
+    if c_volver.button("Volver al inicio", type="primary", use_container_width=True):
+        for k in ("flash_i", "flash_ver", "_flash_filtro_previo"):
+            st.session_state.pop(k, None)
         ir_a("inicio_alumno")
         st.rerun()
 
@@ -451,7 +658,10 @@ def pantalla_resultados():
 # Panel docente
 # --------------------------------------------------------------------------- #
 def pantalla_panel_docente():
-    st.title("Panel docente")
+    st.markdown(
+        estilos.encabezado("Panel docente", NOMBRE_INSTITUCION),
+        unsafe_allow_html=True,
+    )
 
     if DOCENTE_PASSWORD_INICIAL == "cambiar123":
         st.warning(
