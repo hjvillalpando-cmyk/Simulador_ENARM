@@ -8,6 +8,32 @@ siguiente.
 Con 10 guías tienes tus 100 casos, con la ventaja de que quedan repartidos en
 10 temas distintos, que es justo lo que el muestreo estratificado necesita.
 
+## Organizar por especialidad
+
+El simulador deja que el alumno elija una especialidad antes de empezar, así
+que conviene que el campo `especialidad` sea CONSISTENTE. Si en unos casos
+escribes "Medicina Interna" y en otros "Med. Interna", el simulador los tomará
+como dos especialidades distintas.
+
+Usa exactamente uno de estos nombres, tal cual, en el campo `especialidad`:
+
+- Medicina Interna
+- Pediatría
+- Ginecología y Obstetricia
+- Cirugía General
+- Medicina Familiar
+
+Un flujo cómodo: dedica cada bloque de 10 guías a una especialidad. Bajas las
+10 GPC de Medicina Interna, generas C001–C100 con `especialidad` fija en
+"Medicina Interna", y ese archivo lo llamas `casos_medicina_interna.json`.
+Repites con Pediatría en otro archivo. Puedes tener el banco de una sola
+especialidad activo, o unir varios archivos en un `casos.json` con todo, y el
+alumno elegirá desde el menú.
+
+Dónde bajar las guías oficiales (el catálogo central del CENETEC está en
+transición, pero el IMSS las mantiene): imss.gob.mx/guias_practicaclinica.
+Descarga siempre las dos versiones, GER (completa) y GRR (rápida).
+
 ---
 
 ## Prompt (cópialo tal cual, adjuntando una guía cada vez)
@@ -36,6 +62,9 @@ REGLAS DE CONTENIDO
    equivocado. Nada absurdo ni descartable a simple vista.
 4. En "guia_origen" cita el nombre y el número de la guía, más la sección o
    recomendación específica que sustenta la respuesta.
+   En "especialidad" usa EXACTAMENTE uno de estos nombres, sin variaciones:
+   Medicina Interna, Pediatría, Ginecología y Obstetricia, Cirugía General,
+   Medicina Familiar.
 5. En "retroalimentacion" explica por qué la correcta lo es Y por qué cada
    distractora no lo es. Mínimo tres renglones.
 6. Marca "seriado" a 4 de los 10 casos (con 2 o 3 reactivos sobre la misma

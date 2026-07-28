@@ -202,6 +202,7 @@ def generar_excel_grupo(db: Session) -> bytes:
                 "Matrícula": s.usuario.matricula,
                 "Nombre": s.usuario.nombre,
                 "Fecha": s.fecha_inicio.strftime("%Y-%m-%d %H:%M"),
+                "Especialidad": s.especialidad or "Todas las especialidades",
                 "Puntaje (%)": round(s.puntaje, 1),
                 "Aciertos": s.aciertos,
                 "Reactivos": s.total_reactivos,

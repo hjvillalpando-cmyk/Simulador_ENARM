@@ -4,8 +4,8 @@ Aplicación web para que los estudiantes resuelvan sesiones de casos clínicos
 tipo ENARM y el docente siga su avance.
 
 - El alumno entra con matrícula y nombre, sin contraseña.
-- Cada sesión presenta 15 casos elegidos al azar entre temas distintos,
-  evitando los que ya resolvió en sus últimas dos sesiones.
+- El alumno elige una especialidad (o todas mezcladas) y cada sesión presenta
+  15 casos de esa especialidad, al azar y evitando los que ya resolvió.
 - La retroalimentación aparece al terminar, reactivo por reactivo, con la
   referencia a la guía.
 - El docente ve el avance individual y grupal, y exporta todo a Excel.

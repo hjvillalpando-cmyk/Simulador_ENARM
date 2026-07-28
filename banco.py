@@ -125,6 +125,26 @@ def validar_estructura(datos: Any) -> list[str]:
     return errores
 
 
+TODAS = "Todas las especialidades"
+
+
+def especialidades_disponibles(casos: list[dict]) -> list[str]:
+    """Lista ordenada de especialidades presentes en el banco.
+
+    Empieza siempre con la opción 'Todas', para que el alumno pueda practicar
+    de forma mixta como en el examen real.
+    """
+    unicas = sorted({c["especialidad"] for c in casos})
+    return [TODAS] + unicas
+
+
+def casos_por_especialidad(casos: list[dict], especialidad: str) -> list[dict]:
+    """Filtra el banco por especialidad. Con 'Todas' devuelve el banco completo."""
+    if especialidad == TODAS:
+        return list(casos)
+    return [c for c in casos if c["especialidad"] == especialidad]
+
+
 def auditar_banco(casos: list[dict]) -> dict[str, Any]:
     """Revisa la calidad pedagógica del banco, no solo su forma.
 

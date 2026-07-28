@@ -66,6 +66,7 @@ class Sesion(Base):
     total_reactivos = Column(Integer, default=0, nullable=False)
     aciertos = Column(Integer, default=0, nullable=False)
     casos_json = Column(Text, nullable=True)  # lista de IDs de caso, en JSON
+    especialidad = Column(String(80), nullable=True)  # con qué filtro se generó
 
     usuario = relationship("Usuario", back_populates="sesiones")
     respuestas = relationship(
@@ -114,9 +115,30 @@ def obtener_sesion():
         db.close()
 
 
+def _migrar_columnas() -> None:
+    """Agrega columnas nuevas a bases de datos que ya existían.
+
+    create_all() crea tablas que faltan, pero no altera tablas existentes. Para
+    quienes ya tenían la app publicada, esto añade la columna 'especialidad'
+    sin borrar ni un dato. Es seguro ejecutarlo siempre: si la columna ya está,
+    no hace nada.
+    """
+    from sqlalchemy import inspect, text
+
+    inspector = inspect(engine)
+    if "sesiones" not in inspector.get_table_names():
+        return
+    columnas = {c["name"] for c in inspector.get_columns("sesiones")}
+    if "especialidad" not in columnas:
+        tipo = "VARCHAR(80)"
+        with engine.begin() as conn:
+            conn.execute(text(f"ALTER TABLE sesiones ADD COLUMN especialidad {tipo}"))
+
+
 def init_db() -> None:
     """Crea las tablas y el usuario docente inicial si no existe."""
     Base.metadata.create_all(bind=engine)
+    _migrar_columnas()
 
     from auth import generar_hash  # import local para evitar ciclo
     from config import DOCENTE_MATRICULA, DOCENTE_NOMBRE, DOCENTE_PASSWORD_INICIAL

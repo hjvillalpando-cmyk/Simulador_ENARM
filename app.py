@@ -19,7 +19,13 @@ from auth import (
     entrar_como_alumno,
     entrar_como_docente,
 )
-from banco import BancoInvalido, auditar_banco, cargar_banco
+from banco import (
+    BancoInvalido,
+    auditar_banco,
+    cargar_banco,
+    casos_por_especialidad,
+    especialidades_disponibles,
+)
 from config import (
     DOCENTE_PASSWORD_INICIAL,
     NOMBRE_INSTITUCION,
@@ -139,12 +145,6 @@ def pantalla_inicio_alumno():
 
     with col_izq:
         st.subheader("Nueva sesión de examen")
-        st.write(
-            f"Cada sesión presenta **{NUM_CASOS_POR_SESION} casos clínicos** "
-            "elegidos al azar entre temas distintos, evitando los que ya "
-            "resolviste recientemente. Puedes navegar entre reactivos y marcar "
-            "los que quieras revisar. La retroalimentación aparece al terminar."
-        )
 
         try:
             banco = cargar_banco(RUTA_BANCO)
@@ -152,21 +152,52 @@ def pantalla_inicio_alumno():
             st.error(f"No se puede iniciar el examen. {e}")
             banco = None
 
-        if banco and st.button("Iniciar examen", type="primary"):
-            with obtener_sesion() as db:
-                casos = seleccionar_casos(db, usuario["id"], banco)
-            items = construir_examen(casos)
-            st.session_state["examen"] = {
-                "items": items,
-                "respuestas": [None] * len(items),
-                "marcados": [False] * len(items),
-                "tiempos": [0] * len(items),
-                "actual": 0,
-                "inicio_item": time.time(),
-                "inicio_sesion": ahora_utc(),
-            }
-            ir_a("examen")
-            st.rerun()
+        if banco:
+            especialidades = especialidades_disponibles(banco)
+
+            # Cuántos casos tiene cada especialidad, para orientar al alumno.
+            conteo = {}
+            for esp in especialidades:
+                conteo[esp] = len(casos_por_especialidad(banco, esp))
+
+            st.write(
+                "Elige una **especialidad** para concentrarte en ella, o "
+                "practica con todas mezcladas como en el examen real."
+            )
+            especialidad = st.selectbox(
+                "Especialidad",
+                especialidades,
+                format_func=lambda e: f"{e}  ({conteo[e]} casos)",
+            )
+
+            disponibles = conteo[especialidad]
+            objetivo = min(NUM_CASOS_POR_SESION, disponibles)
+
+            st.caption(
+                f"Esta sesión te presentará {objetivo} caso(s) de "
+                f"**{especialidad.lower()}**, elegidos al azar y evitando los "
+                "que resolviste hace poco. La retroalimentación aparece al final."
+            )
+
+            if disponibles == 0:
+                st.warning("Esta especialidad todavía no tiene casos cargados.")
+            elif st.button("Iniciar examen", type="primary"):
+                casos_filtrados = casos_por_especialidad(banco, especialidad)
+                with obtener_sesion() as db:
+                    casos = seleccionar_casos(db, usuario["id"], casos_filtrados)
+                items = construir_examen(casos)
+                st.session_state["examen"] = {
+                    "items": items,
+                    "respuestas": [None] * len(items),
+                    "marcados": [False] * len(items),
+                    "tiempos": [0] * len(items),
+                    "actual": 0,
+                    "inicio_item": time.time(),
+                    "inicio_sesion": ahora_utc(),
+                    "especialidad": especialidad,
+                }
+                ir_a("examen")
+                st.rerun()
 
     with col_der:
         st.subheader("Tu historial")
@@ -326,6 +357,7 @@ def finalizar_examen():
             aciertos=resumen["aciertos"],
             total_reactivos=resumen["total"],
             casos_json=json.dumps(sorted({i["caso_id"] for i in items})),
+            especialidad=examen.get("especialidad"),
         )
         db.add(sesion)
         db.flush()  # obtiene sesion.id sin cerrar la transacción
@@ -697,6 +729,7 @@ def pantalla_panel_docente():
                 "puntaje": s.puntaje,
                 "aciertos": s.aciertos,
                 "total": s.total_reactivos,
+                "especialidad": s.especialidad or "Todas las especialidades",
             }
             for s in sesiones
         ]
@@ -802,15 +835,32 @@ def pantalla_panel_docente():
                 df_s = pd.DataFrame(
                     [
                         {"Sesión": i + 1, "Fecha": s["fecha"].strftime("%d/%m/%Y"),
-                         "Puntaje": round(s["puntaje"], 1)}
+                         "Puntaje": round(s["puntaje"], 1),
+                         "Especialidad": s["especialidad"]}
                         for i, s in enumerate(ses_alumno)
                     ]
                 )
                 fig = px.line(df_s, x="Sesión", y="Puntaje", markers=True,
-                              hover_data=["Fecha"], title="Curva de aprendizaje")
+                              hover_data=["Fecha", "Especialidad"],
+                              title="Curva de aprendizaje")
                 fig.update_layout(height=300, yaxis_range=[0, 100],
                                   margin=dict(l=0, r=0, t=40, b=0))
                 st.plotly_chart(fig, use_container_width=True)
+
+                # Avance por especialidad: cuántas sesiones y qué promedio
+                # lleva el alumno en cada una.
+                por_esp = (
+                    df_s.groupby("Especialidad", as_index=False)
+                    .agg(Sesiones=("Puntaje", "count"),
+                         Promedio=("Puntaje", "mean"),
+                         Mejor=("Puntaje", "max"))
+                )
+                por_esp["Promedio"] = por_esp["Promedio"].round(1)
+                st.markdown("**Avance por especialidad**")
+                st.dataframe(
+                    por_esp.sort_values("Promedio"),
+                    hide_index=True, use_container_width=True,
+                )
 
                 resp_alumno = [r for r in datos_respuestas if r["usuario_id"] == uid]
                 if resp_alumno:
