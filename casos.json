@@ -2,33 +2,21 @@
   {
     "id": "C001",
     "especialidad": "Medicina Familiar",
-    "tema": "Diabetes mellitus tipo 2",
-    "guia_origen": "GPC Diagnóstico y tratamiento de la diabetes mellitus tipo 2 en el primer nivel de atención (IMSS-718-14), criterios diagnósticos ADA adoptados",
-    "tipo": "seriado",
-    "vineta": "Mujer de 52 años, sin antecedentes patológicos conocidos, acude a consulta por poliuria y polidipsia de tres meses de evolución, con pérdida de 6 kg de peso no intencional. Su madre tiene diabetes. IMC 31.4 kg/m2, TA 128/78 mmHg. En laboratorio de rutina se reporta glucosa plasmática en ayuno de 168 mg/dL. Se repite el estudio una semana después y se obtiene glucosa en ayuno de 154 mg/dL y HbA1c de 8.1%. La creatinina sérica es de 0.8 mg/dL y el examen general de orina no muestra cetonas.",
+    "tema": "Cistitis aguda no complicada",
+    "guia_origen": "Guía de Práctica Clínica Infección de Vías Urinarias Bajas no Complicada en la Mujer, Sección 4.1 Diagnóstico y Tratamiento",
+    "tipo": "unico",
+    "vineta": "Femenina de 28 años de edad, sin antecedentes crónico-degenerativos, acude a consulta por presentar disuria, polaquiuria y tenesmo vesical de 48 horas de evolución. A la exploración física: T 36.8 °C, TA 115/75 mmHg, FC 72 bpm, FR 16 rpm, abdomen blando, depresible, doloroso a la palpación en hipogastrio, Giordano bilateral negativo. Examen general de orina: leucocitos 25 por campo, nitritos positivos, eritrocitos 2 por campo, bacterias abundantes. En la región geográfica local se reporta una resistencia bacteriana a trimetoprim con sulfametoxazol mayor al 20%.",
     "reactivos": [
       {
-        "enunciado": "¿Cuál es el diagnóstico que corresponde a esta paciente?",
+        "enunciado": "De acuerdo con la Guía de Práctica Clínica, ¿cuál es el tratamiento farmacológico de elección en dosis única recomendado para esta paciente?",
         "opciones": [
-          "Glucosa alterada en ayuno",
-          "Intolerancia a los carbohidratos",
-          "Diabetes mellitus tipo 2",
-          "Diabetes mellitus tipo 1 de inicio tardío"
-        ],
-        "respuesta_correcta": "C",
-        "retroalimentacion": "Dos determinaciones de glucosa en ayuno iguales o mayores a 126 mg/dL en días distintos, más una HbA1c de 6.5% o más, confirman diabetes mellitus. La glucosa alterada en ayuno corresponde a valores de 100 a 125 mg/dL y la intolerancia a los carbohidratos se define por la curva de tolerancia a las 2 horas entre 140 y 199 mg/dL, cifras que la paciente rebasa. La diabetes tipo 1 se descarta por la ausencia de cetosis, la edad y el fenotipo con obesidad.",
-        "nivel": "diagnostico"
-      },
-      {
-        "enunciado": "Además de las modificaciones al estilo de vida, ¿cuál es el tratamiento farmacológico inicial indicado?",
-        "opciones": [
-          "Metformina 500 mg cada 12 horas con incremento gradual",
-          "Glibenclamida 5 mg cada 24 horas",
-          "Insulina glargina nocturna",
-          "Diferir el fármaco y revalorar en tres meses"
+          "Fosfomicina 3 g en dosis única",
+          "Nitrofurantoína 100 mg cada 12 horas por 7 días",
+          "Ciprofloxacino 500 mg cada 12 horas por 3 días",
+          "Ceftriaxona 1 g intramuscular dosis única"
         ],
         "respuesta_correcta": "A",
-        "retroalimentacion": "La metformina es el fármaco de primera línea al momento del diagnóstico, salvo contraindicación por filtrado glomerular bajo, situación que aquí no existe. Se inicia a dosis baja y se escala para reducir la intolerancia gastrointestinal. La glibenclamida es de segunda línea por el riesgo de hipoglucemia y ganancia de peso; la insulina se reserva para HbA1c mayor de 9% con síntomas catabólicos marcados o descompensación aguda; y diferir el tratamiento retrasa el control metabólico en una paciente ya sintomática.",
+        "retroalimentacion": "La Fosfomicina 3 g dosis única es la alternativa de elección en regiones donde la resistencia a TMP/SMX supera el 20% para el tratamiento de cistitis no complicada en mujeres. La Nitrofurantoína (opción B) requiere un esquema de 7 días y no se administra en dosis única. El Ciprofloxacino (opción C) no es la primera elección para cistitis no complicada de dosis única y debe reservarse para IVU alta para evitar resistencia bacteriana. La Ceftriaxona parenteral (opción D) es un tratamiento innecesario e injustificado en un cuadro ambulatorio no complicado.",
         "nivel": "tratamiento"
       }
     ]
@@ -36,189 +24,513 @@
   {
     "id": "C002",
     "especialidad": "Ginecología y Obstetricia",
-    "tema": "Preeclampsia",
-    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la preeclampsia en segundo y tercer nivel de atención (IMSS-020-08), criterios de severidad y neuroprofilaxis",
+    "tema": "Cistouretritis recurrente",
+    "guia_origen": "Guía de Práctica Clínica Infección Aguda Recurrente del Tracto Urinario Bajo, Sección 4.2.1 Diagnóstico, Tratamiento y Seguimiento",
     "tipo": "seriado",
-    "vineta": "Primigesta de 24 años con embarazo de 34.2 semanas por fecha de última regla confiable. Acude por cefalea frontal persistente de 12 horas y fosfenos. TA 168/112 mmHg en dos tomas separadas por 15 minutos, con reposo previo. Hay edema de miembros inferiores +++ e hiperreflexia rotuliana. Laboratorio: plaquetas 118 000/mm3, AST 78 U/L, ALT 84 U/L, creatinina 0.9 mg/dL, proteinuria en tira reactiva +++. La frecuencia cardiaca fetal es de 142 lpm.",
+    "vineta": "Femenina de 34 años de edad, sexualmente activa, consulta por disuria y polaquiuria de 2 días de evolución. Refiere haber presentado 4 episodios similares de infección de vías urinarias bajas en los últimos 12 meses, cada uno separado por lapsos de 2 a 3 meses asintomáticos, resueltos completamente con tratamiento. A la exploración física: T 36.6 °C, TA 120/80 mmHg, FC 70 bpm, FR 16 rpm, dolor leve en región suprapúbica. Urocultivo previo aisló Escherichia coli y el actual aísla Klebsiella pneumoniae con >10^5 UFC/ml.",
     "reactivos": [
       {
-        "enunciado": "¿Cuál es el diagnóstico más probable?",
+        "enunciado": "Con base en la evolución clínica y los hallazgos microbiológicos, ¿cuál es la clasificación adecuada del patrón de recurrencia en esta paciente?",
         "opciones": [
-          "Hipertensión gestacional",
-          "Preeclampsia sin datos de severidad",
-          "Hipertensión crónica con embarazo",
-          "Preeclampsia con datos de severidad"
-        ],
-        "respuesta_correcta": "D",
-        "retroalimentacion": "La paciente cumple con hipertensión de 160/110 mmHg o más después de la semana 20, proteinuria, y además presenta datos de severidad: síntomas neurológicos, trombocitopenia por debajo de 150 000 y elevación de transaminasas al doble del valor normal. La hipertensión gestacional se descarta porque hay proteinuria y afectación orgánica; la preeclampsia sin datos de severidad no cursa con estas cifras tensionales ni con alteración de laboratorio; y la hipertensión crónica requeriría cifras elevadas antes de la semana 20.",
-        "nivel": "diagnostico"
-      },
-      {
-        "enunciado": "¿Cuál es la conducta inmediata prioritaria en el servicio de urgencias?",
-        "opciones": [
-          "Iniciar sulfato de magnesio y antihipertensivo, con interrupción del embarazo una vez estabilizada",
-          "Administrar esquema de maduración pulmonar y egresar con manejo ambulatorio",
-          "Iniciar diurético de asa para reducir el edema y la presión arterial",
-          "Realizar cesárea de urgencia sin manejo antihipertensivo previo"
-        ],
-        "respuesta_correcta": "A",
-        "retroalimentacion": "En preeclampsia con datos de severidad la prioridad es prevenir la eclampsia con sulfato de magnesio y controlar la crisis hipertensiva con un antihipertensivo de acción rápida, para después resolver el embarazo, que es el tratamiento definitivo. El manejo ambulatorio está contraindicado ante datos de severidad. Los diuréticos no tienen indicación porque la paciente cursa con depleción del volumen intravascular. Operar sin controlar antes la presión arterial expone a la madre a un evento vascular cerebral durante el procedimiento.",
-        "nivel": "tratamiento"
-      }
-    ]
-  },
-  {
-    "id": "C003",
-    "especialidad": "Cirugía General",
-    "tema": "Apendicitis aguda",
-    "guia_origen": "GPC Diagnóstico de apendicitis aguda (IMSS-031-08), escala de Alvarado y criterios de tratamiento quirúrgico",
-    "tipo": "unico",
-    "vineta": "Hombre de 21 años, previamente sano, con dolor abdominal de 18 horas de evolución que inició en el epigastrio y migró a la fosa iliaca derecha. Refiere náusea, dos vómitos y anorexia. Temperatura 38.1 °C, FC 98 lpm. A la exploración presenta dolor a la palpación en el punto de McBurney con rebote positivo. Biometría hemática con leucocitos de 14 800/mm3 y 82% de neutrófilos. El examen general de orina es normal.",
-    "reactivos": [
-      {
-        "enunciado": "Con una escala de Alvarado de 9 puntos, ¿cuál es la conducta indicada?",
-        "opciones": [
-          "Observación hospitalaria por 24 horas con analgésico y revaloración",
-          "Tomografía abdominal contrastada antes de tomar cualquier decisión",
-          "Manejo conservador con antibiótico intravenoso y sin cirugía",
-          "Apendicectomía, con antibiótico profiláctico prequirúrgico"
-        ],
-        "respuesta_correcta": "D",
-        "retroalimentacion": "Una puntuación de Alvarado de 7 o más tiene alta probabilidad de apendicitis y justifica la intervención quirúrgica sin estudios adicionales. La observación prolongada aumenta el riesgo de perforación en un cuadro ya florido. La tomografía se reserva para casos con puntuación intermedia o presentación atípica, sobre todo en mujeres en edad fértil y adultos mayores. El manejo conservador solo con antibiótico no es el estándar en el paciente con cuadro clásico no complicado y disponibilidad quirúrgica.",
-        "nivel": "tratamiento"
-      }
-    ]
-  },
-  {
-    "id": "C004",
-    "especialidad": "Medicina Interna",
-    "tema": "Neumonía adquirida en la comunidad",
-    "guia_origen": "GPC Diagnóstico y tratamiento de la neumonía adquirida en la comunidad en adultos (IMSS-234-09), escala CURB-65",
-    "tipo": "seriado",
-    "vineta": "Hombre de 71 años con tabaquismo suspendido hace 10 años, llevado a urgencias por fiebre de 38.8 °C, tos con expectoración herrumbrosa y disnea de cuatro días. Se encuentra desorientado en tiempo. TA 88/56 mmHg, FC 112 lpm, FR 32 rpm, saturación 88% al aire ambiente. A la auscultación hay estertores crepitantes en la base derecha. Laboratorio: urea 62 mg/dL, leucocitos 18 200/mm3. La radiografía de tórax muestra consolidación del lóbulo inferior derecho.",
-    "reactivos": [
-      {
-        "enunciado": "De acuerdo con la escala CURB-65, ¿qué puntuación tiene el paciente y qué implica?",
-        "opciones": [
-          "2 puntos, manejo ambulatorio con seguimiento estrecho",
-          "5 puntos, mortalidad elevada con indicación de terapia intensiva",
-          "3 puntos, hospitalización en piso de medicina interna",
-          "1 punto, tratamiento en casa con antibiótico oral"
-        ],
-        "respuesta_correcta": "B",
-        "retroalimentacion": "El paciente suma los cinco criterios: confusión, urea mayor de 42 mg/dL, frecuencia respiratoria de 30 rpm o más, presión sistólica menor de 90 o diastólica de 60 mmHg o menos, y edad de 65 años o más. Una puntuación de 3 o más obliga a hospitalizar, y de 4 a 5 puntos indica valorar la unidad de cuidados intensivos por la mortalidad asociada. Cualquier opción que proponga manejo ambulatorio ignora la inestabilidad hemodinámica y la hipoxemia que ya presenta.",
-        "nivel": "diagnostico"
-      },
-      {
-        "enunciado": "¿Cuál es la medida de mayor impacto para prevenir un nuevo episodio una vez resuelto el cuadro?",
-        "opciones": [
-          "Antibiótico profiláctico continuo por seis meses",
-          "Radiografía de tórax de control cada mes durante un año",
-          "Vacunación antineumocócica y contra influenza",
-          "Suplementación con vitamina C a dosis altas"
+          "Recaída por persistencia bacteriana del mismo microorganismo",
+          "Bacteriuria asintomática no complicada",
+          "Reinfección por un germen diferente",
+          "Pielonefritis en fase inicial"
         ],
         "respuesta_correcta": "C",
-        "retroalimentacion": "En el adulto mayor la vacunación antineumocócica y la vacuna anual contra influenza son las intervenciones preventivas con evidencia de reducción de hospitalización y mortalidad por neumonía. La profilaxis antibiótica prolongada no está indicada y favorece resistencia bacteriana. La radiografía de control seriada solo se justifica ante sospecha de neoplasia o falta de resolución clínica. La vitamina C no ha demostrado prevenir la neumonía en esta población.",
+        "retroalimentacion": "La paciente presenta una reinfección, la cual se caracteriza por lapsos largos asintomáticos entre episodios, resolución completa de los cuadros previos y la infección provocada por un germen distinto al inicial (Klebsiella pneumoniae vs E. coli). La recaída (opción A) se define por persitencia bacteriana con lapsos cortos e infección por el mismo microorganismo. No se trata de bacteriuria asintomática (opción B) ya que la paciente cursa sintomática con disuria y polaquiuria. Tampoco es pielonefritis (opción D) debido a la ausencia de fiebre, dolor en fosa renal o respuesta inflamatoria sistémica.",
+        "nivel": "diagnostico"
+      },
+      {
+        "enunciado": "Respecto al abordaje posterior al tratamiento del episodio agudo, ¿cuál es la indicación recomendada por la GPC para esta paciente?",
+        "opciones": [
+          "Modificar factores de riesgo y considerar profilaxis sin realizar estudios de imagen",
+          "Solicitar urografía excretora de forma prioritaria",
+          "Realizar cistoscopia diagnóstica ambulatoria",
+          "Indicar tomografía contrastada de abdomen y pelvis"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "Las pacientes con reinfecciones urinarias recurrentes tienen una probabilidad muy baja de presentar anormalidades estructurales, por lo que la GPC establece no realizar estudios de imagen rutinarios y enfocarse en modificar factores de riesgo y evaluar profilaxis. La urografía excretora (opción B) y la cistoscopia (opción C) no modifican la conducta terapéutica en el 88% y 89% de los casos respectivamente según la evidencia. La tomografía abdominal (opción D) está reservada para casos de falla terapéutica, litiasis o hematuria.",
         "nivel": "prevencion"
       }
     ]
   },
   {
-    "id": "C005",
+    "id": "C003",
     "especialidad": "Medicina Interna",
-    "tema": "Cetoacidosis diabética",
-    "guia_origen": "GPC Diagnóstico y tratamiento de la cetoacidosis diabética en el adulto (IMSS-388-10), fase inicial de reanimación",
-    "tipo": "unico",
-    "vineta": "Mujer de 19 años con diabetes tipo 1 de cinco años de evolución, que suspendió la insulina hace tres días. Llega a urgencias con vómito, dolor abdominal y respiración profunda y rápida. TA 92/58 mmHg, FC 124 lpm, FR 28 rpm, mucosas secas. Laboratorio: glucosa 486 mg/dL, pH 7.09, bicarbonato 7 mEq/L, anión gap 28, cetonas séricas positivas, sodio 132 mEq/L y potasio 3.1 mEq/L.",
+    "tema": "Pielonefritis aguda no complicada",
+    "guia_origen": "Guía de Práctica Clínica Infección del Tracto Urinario Alto, Sección 4.3.1 Diagnóstico, Tratamiento y Seguimiento",
+    "tipo": "seriado",
+    "vineta": "Femenina de 29 años de edad, sin comorbilidades, acude por presentar fiebre de 38.8 °C, escalofríos, dolor en fosa renal izquierda, disuria y náusea de 24 horas de evolución. A la exploración física: TA 110/70 mmHg, FC 88 bpm, FR 18 rpm, T 38.6 °C. Puño percusión lumbar izquierda (Giordano) claramente positiva. No presenta signos de respuesta inflamatoria sistémica severa ni deshidratación, y tolera la vía oral. Examen general de orina: leucocitos >50 por campo, nitritos positivos, esterasa leucocitaria positiva.",
     "reactivos": [
       {
-        "enunciado": "¿Cuál es la conducta inicial correcta antes de iniciar la infusión de insulina?",
+        "enunciado": "¿Cuál es el manejo inicial y esquema antibiótico ambulatorio de primera línea recomendado por la GPC?",
         "opciones": [
-          "Administrar bicarbonato de sodio en bolo para corregir la acidosis",
-          "Iniciar insulina rápida en bolo sin esperar resultados adicionales",
-          "Restringir líquidos para evitar edema cerebral",
-          "Reponer volumen con solución salina y corregir el potasio antes de la insulina"
+          "Ceftriaxona 1 g IV cada 12 horas con hospitalización obligatoria",
+          "Nitrofurantoína 100 mg VO cada 6 horas por 14 días",
+          "Amoxicilina 500 mg VO cada 8 horas sin tomar cultivo",
+          "Toma de urocultivo e inicio de Ciprofloxacino 500 mg VO cada 12 horas por 7 a 14 días"
         ],
         "respuesta_correcta": "D",
-        "retroalimentacion": "Con potasio sérico menor de 3.3 mEq/L la insulina debe posponerse hasta reponer potasio, porque la insulina lo introduce a la célula y puede desencadenar una arritmia mortal. Simultáneamente se inicia la reposición de volumen con solución salina isotónica. El bicarbonato solo se considera con pH menor de 6.9 y no en este caso. Aplicar insulina de inmediato con hipokalemia es el error que más muertes evitables produce en este escenario. Restringir líquidos empeora el estado de choque hipovolémico.",
+        "retroalimentacion": "En mujeres no gestantes con pielonefritis aguda no complicada, clínicamente estables y con adecuada tolerancia oral, el tratamiento de primera línea es Ciprofloxacino por vía oral previa toma de urocultivo. La hospitalización con Ceftriaxona IV (opción A) no es necesaria en ausencia de respuesta inflamatoria sistémica o falla a la vía oral. La Nitrofurantoína (opción B) no alcanza concentraciones hídricas y sanguíneas suficientes para tratar infecciones del tracto urinario alto. La Amoxicilina empírica sin cultivo (opción C) presenta elevadas tasas de resistencia bacteriana en enterobacterias.",
+        "nivel": "tratamiento"
+      },
+      {
+        "enunciado": "Durante el seguimiento ambulatorio de esta paciente, ¿cuándo se espera la respuesta clínica favorable y en qué momento se debe solicitar el urocultivo de control?",
+        "opciones": [
+          "Respuesta inmediata a las 12 horas y urocultivo al día siguiente",
+          "Respuesta clínica entre las 48 y 72 horas y urocultivo de control a los 7 a 14 días postratamiento",
+          "Normalización de la temperatura a las 6 horas y urocultivo en 30 días",
+          "Seguimiento a los 30 días únicamente si persisten los síntomas"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "La evaluación de la respuesta clínica en pielonefritis se realiza entre las 48 y 72 horas del inicio del esquema (sabiendo que la fiebre puede tardar hasta 5 días en ceder) y la GPC indica solicitar un urocultivo de control entre los 7 y 14 días posteriores al término del tratamiento antibiótico. Las 12 horas (opción A) o 6 horas (opción C) representan tiempos prematuros para evaluar eficacia antibiótica tisular. Omitir el urocultivo de control de rutina a los 7-14 días (opción D) contraviene el seguimiento establecido en la guía.",
+        "nivel": "pronostico"
+      }
+    ]
+  },
+  {
+    "id": "C004",
+    "especialidad": "Medicina Familiar",
+    "tema": "Bacteriuria asintomática",
+    "guia_origen": "Guía de Práctica Clínica Bacteriuria Asintomática en Mujeres, Sección 4.4",
+    "tipo": "unico",
+    "vineta": "Femenina de 68 años de edad, con antecedente de Diabetes Mellitus tipo 2 en tratamiento con Metformina 850 mg cada 12 horas (Glucosa en ayuno 128 mg/dl, HbA1c 6.9%). Acude a consulta de control trimestral totalmente asintomática, negando disuria, polaquiuria, fiebre o dolor lumbar. En sus estudios de rutina se reporta examen general de orina con leucocitos 15 por campo y bacterias abundantes; urocultivo de control confirma Escherichia coli con >10^5 UFC/ml en dos muestras consecutivas.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con las recomendaciones de la Guía de Práctica Clínica, ¿cuál es la conducta médica indicada en esta paciente?",
+        "opciones": [
+          "Ciprofloxacino 500 mg cada 12 horas por 7 días",
+          "Trimethoprim con Sulfametoxazol 160/800 mg cada 12 horas por 3 días",
+          "No administrar tratamiento antibiótico y mantener en vigilancia",
+          "Nitrofurantoína 100 mg cada 12 horas por 10 días"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "La GPC establece explícitamente que las mujeres no embarazadas, aun cuando sean ancianas o diabéticas, no deben recibir tratamiento antibiótico para la bacteriuria asintomática, ya que no reduce la aparición de episodios sintomáticos ni la mortalidad, e incrementa el riesgo de efectos adversos y resistencia bacteriana. Las opciones A, B y D prescriben antibióticos innecesarios que están contraindicados en bacteriuria asintomática no gestacional.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C005",
+    "especialidad": "Cirugía General",
+    "tema": "Infección del tracto urinario en paciente con sonda vesical",
+    "guia_origen": "Guía de Práctica Clínica Infección del Tracto Urinario en Mujeres con Sonda Vesical, Sección 4.5",
+    "tipo": "seriado",
+    "vineta": "Femenina de 62 años de edad, con sonda vesical a permanencia desde hace 35 días por retención urinaria posterior a cirugía ginecológica. Acude por presentar fiebre de 38.3 °C, escalofríos y dolor suprapúbico de 12 horas de evolución. A la exploración física: T 38.2 °C, TA 120/75 mmHg, FC 84 bpm, FR 17 rpm. El drenaje urinario a través de la sonda luce turbio y con sedimento.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿cuál es la primera maniobra que debe realizarse antes de iniciar la antibioticoterapia empírica en esta paciente con sonda de largo tiempo?",
+        "opciones": [
+          "Cambio de la sonda vesical y toma de muestra de orina para urocultivo",
+          "Irrigación vesical continua con solución antiséptica",
+          "Realizar prueba rápida de tira reactiva a través del colector",
+          "Iniciar metenamina y mantener la misma sonda por 3 meses más"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "En pacientes con sonda por tiempo prolongado (>28 días) que desarrollan una IVU sintomática, la GPC recomienda realizar el cambio de la sonda vesical antes de iniciar el tratamiento antibiótico y tomar la muestra para urocultivo de la nueva sonda, lo que favorece la resolución de la fiebre y disminuye las recurrencias. La irrigación vesical (opción B) no está recomendada. La tira reactiva (opción C) carece de valor diagnóstico en pacientes con sonda vesical ya que la presencia del catéter induce piuria y bacteriuria de forma invariable. La metenamina (opción D) no es el manejo indicado para un cuadro sintomático agudo.",
+        "nivel": "tratamiento"
+      },
+      {
+        "enunciado": "¿Cuál es el esquema antibiótico ambulatorio de elección por 7 días recomendado por la GPC para el manejo de esta IVU sintomática en paciente con sonda?",
+        "opciones": [
+          "Nitrofurantoína 100 mg cada 12 horas por 14 días",
+          "Fosfomicina 3 g cada 3 días por un mes",
+          "Ceftriaxona IV por 14 días en internamiento continuo",
+          "Ciprofloxacino o Amoxicilina con Ácido Clavulánico por 7 días"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "Los pacientes con sonda vesical que presentan síntomas de IVU aguda deben tratarse con Ciprofloxacino o Amoxicilina con Ácido Clavulánico durante 7 días. La Nitrofurantoína (opción A) no logra concentraciones hídricas parenquimatosas o sanguíneas adecuadas. La Fosfomicina en esquemas prolongados (opción B) no está avalada para infección urinaria alta o complicada en sondados. La Ceftriaxona IV por 14 días (opción C) es un esquema de hospitalización desproporcionado si no existen datos de sepsis grave o imposibilidad de vía oral.",
         "nivel": "tratamiento"
       }
     ]
   },
   {
     "id": "C006",
-    "especialidad": "Ginecología y Obstetricia",
-    "tema": "Infección urinaria en el embarazo",
-    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la infección del tracto urinario bajo durante el embarazo (IMSS-078-08), tamizaje de bacteriuria asintomática",
-    "tipo": "unico",
-    "vineta": "Mujer de 27 años con embarazo de 15 semanas, asintomática, acude a su control prenatal de rutina. No refiere disuria, urgencia ni dolor lumbar. La exploración física es normal, sin dolor a la puñopercusión. Se le solicitó urocultivo de tamizaje, que reporta desarrollo de Escherichia coli con 120 000 UFC/mL, sensible a nitrofurantoína, amoxicilina y cefalexina. El examen general de orina muestra nitritos positivos y 12 leucocitos por campo.",
+    "especialidad": "Medicina Familiar",
+    "tema": "Factores de riesgo para Crecimiento Prostático Benigno",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.1 Prevención",
+    "tipo": "seriado",
+    "vineta": "Masculino de 56 años de edad, acude a consulta por síntomas urinarios leves. Antecedentes: Índice de Masa Corporal (IMC) de 31.5 kg/m², circunferencia de cintura de 102 cm, relación cintura-cadera de 0.98, glucosa en ayuno de 135 mg/dl, triglicéridos 220 mg/dl, colesterol HDL 32 mg/dl y TA 135/85 mmHg, configurando Síndrome Metabólico. En la ultrasonografía prostática previa se reporta un volumen de próstata de 38 ml.",
     "reactivos": [
       {
-        "enunciado": "¿Cuál es la conducta indicada en esta paciente?",
+        "enunciado": "Con base en la GPC GPC-IMSS-176-18, ¿cuál de las siguientes combinaciones de factores se encuentra fuertemente asociada al desarrollo y crecimiento prostático acelerado?",
         "opciones": [
-          "Tratar con antibiótico según sensibilidad y repetir urocultivo de control",
-          "No tratar por estar asintomática y repetir el urocultivo en el tercer trimestre",
-          "Iniciar ciprofloxacino por siete días",
-          "Indicar únicamente aumento de la ingesta de líquidos y arándano"
+          "Hipotiroidismo, tabaquismo e hiperuricemia",
+          "Obesidad, glucosa elevada, colesterol HDL bajo y Síndrome Metabólico",
+          "Consumo moderado de alcohol e infecciones virales",
+          "Actividad física intensa y dieta hiperproteica"
         ],
-        "respuesta_correcta": "A",
-        "retroalimentacion": "La bacteriuria asintomática en el embarazo, definida por 100 000 UFC/mL o más de un solo germen, siempre se trata, porque hasta un tercio de las pacientes progresa a pielonefritis con riesgo de parto pretérmino y bajo peso al nacer. Después del tratamiento se requiere urocultivo de control para confirmar la erradicación. Las quinolonas están contraindicadas en el embarazo por el daño al cartílago fetal. Las medidas higiénicas por sí solas no erradican la bacteriuria.",
-        "nivel": "tratamiento"
+        "respuesta_correcta": "B",
+        "retroalimentacion": "La GPC establece que los factores de riesgo modificables para crecimiento prostático y STUI incluyen la obesidad (medida por IMC y relación cintura-cadera), la hiperglucemia, los niveles bajos de colesterol HDL y la presencia de Síndrome Metabólico debido a la inducción de procesos inflamatorios crónicos. Las opciones A, C y D incluyen condiciones que no están sustentadas como factores etiológicos directos para crecimiento prostático benigno en la guía.",
+        "nivel": "prevencion"
+      },
+      {
+        "enunciado": "Respecto a la relación entre las medidas antropométricas y el riesgo de hiperplasia prostática benigna señalada en la evidencia de la guía, ¿qué incremento de riesgo se reporta según la relación cintura-cadera?",
+        "opciones": [
+          "Reducción del riesgo de crecimiento prostático proporcional al perímetro abdominal",
+          "Sin relación entre el riesgo de HPB y las medidas antropométricas",
+          "Incremento del riesgo de HPB en un 10% por cada aumento de 0.05 en la relación cintura-cadera",
+          "Desarrollo de HPB únicamente si el IMC es superior a 40 kg/m²"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "El estudio de cohorte Kristal 2007 citado en la guía demuestra que cada incremento de 0.05 en la relación cintura-cadera (indicador de obesidad abdominal) se asocia significativamente con un aumento del 10% en el riesgo de presentar hiperplasia prostática benigna. Las opciones A y B niegan de forma errónea esta asociación. La opción D establece de forma falsa un punto de corte arbitrario no contemplado en la evidencia de la GPC.",
+        "nivel": "diagnostico"
       }
     ]
   },
   {
     "id": "C007",
-    "especialidad": "Pediatría",
-    "tema": "Enfermedad diarreica aguda en pediatría",
-    "guia_origen": "GPC Prevención, diagnóstico y tratamiento de la diarrea aguda en niños de dos meses a cinco años (IMSS-156-08), planes de hidratación",
+    "especialidad": "Medicina Familiar",
+    "tema": "Síntomas del Tracto Urinario Inferior (STUI)",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.2 Evaluación Inicial",
     "tipo": "unico",
-    "vineta": "Lactante de 14 meses, con peso de 9.5 kg, llevado por diarrea líquida sin sangre, ocho evacuaciones en las últimas 24 horas, y vómito en dos ocasiones. Se encuentra irritable pero bebe con avidez cuando se le ofrece líquido. Tiene ojos hundidos, mucosa oral seca y el signo del pliegue cutáneo desaparece en menos de dos segundos. Llenado capilar de 2 segundos, FC 138 lpm, sin fiebre. Diuresis disminuida referida por la madre.",
+    "vineta": "Masculino de 62 años de edad, acude refiriendo que desde hace 6 meses presenta disminución en la fuerza y calibre del chorro urinario, intermitencia miccional, vaciado incompleto y goteo terminal. Además, en las últimas semanas ha presentado urgencia miccional y nicturia de 3 veces por noche. A la exploración física: signos vitales T 36.5 °C, TA 125/80 mmHg, FC 74 bpm. Genitales externos sin meato estenosado ni fimosis.",
     "reactivos": [
       {
-        "enunciado": "¿Qué grado de deshidratación tiene y cuál es el plan de hidratación correspondiente?",
+        "enunciado": "De acuerdo con la clasificación de los STUI en la GPC, ¿cómo se categorizan correctamente los síntomas de este paciente?",
         "opciones": [
-          "Sin deshidratación, plan A en el domicilio",
-          "Deshidratación con choque, plan C con carga intravenosa inmediata",
-          "Deshidratación moderada, plan B con vida suero oral en la unidad de salud",
-          "Deshidratación grave, ayuno absoluto e hidratación parenteral exclusiva"
+          "Vaciamiento: urgencia y nicturia; Almacenamiento: chorro débil e intermitencia",
+          "Almacenamiento: esfuerzo miccional y goteo; Vaciamiento: nicturia y frecuencia",
+          "Todos clasificados como síntomas neurogénicos primarios",
+          "Vaciamiento: chorro débil e intermitencia; Almacenamiento: urgencia y nicturia; Postmiccional: vaciado incompleto y goteo terminal"
         ],
-        "respuesta_correcta": "C",
-        "retroalimentacion": "La irritabilidad, la sed intensa, los ojos hundidos y el pliegue cutáneo que retorna con lentitud corresponden a deshidratación moderada, que se maneja con plan B: vida suero oral bajo supervisión en la unidad de salud, con reevaluación a las cuatro horas. El plan A aplica a niños sin datos de deshidratación. El plan C se reserva para el paciente con estado de choque o incapacidad para la vía oral, situación que aquí no ocurre porque el niño bebe con avidez. El ayuno está contraindicado: la alimentación debe continuar.",
-        "nivel": "tratamiento"
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La GPC agrupa los STUI en tres categorías claras: de vaciamiento (chorro débil, intermitencia, esfuerzo, goteo terminal), de almacenamiento (urgencia, frecuencia, nicturia, incontinencia) y postmiccionales (sensación de vaciado incompleto y goteo postmiccional). La opción A invierte los grupos de vaciamiento y almacenamiento. La opción B mezcla erróneamente síntomas de vaciamiento en almacenamiento y viceversa. La opción C atribuye erróneamente el cuadro a etiología neurogénica sin respaldo clínico.",
+        "nivel": "diagnostico"
       }
     ]
   },
   {
     "id": "C008",
-    "especialidad": "Medicina Interna",
-    "tema": "Síndrome coronario agudo con elevación del ST",
-    "guia_origen": "GPC Diagnóstico y tratamiento del infarto agudo del miocardio con elevación del segmento ST (IMSS-357-13), estrategias de reperfusión y tiempos",
-    "tipo": "seriado",
-    "vineta": "Hombre de 58 años, hipertenso y fumador, con dolor retroesternal opresivo de 90 minutos de evolución, irradiado a mandíbula y brazo izquierdo, acompañado de diaforesis y náusea. TA 138/86 mmHg, FC 92 lpm, sin datos de insuficiencia cardiaca. El electrocardiograma muestra elevación del segmento ST de 3 mm en las derivaciones DII, DIII y aVF, con descenso especular en DI y aVL. La unidad se encuentra en un hospital sin sala de hemodinamia, y el centro con angioplastia primaria está a 3 horas de traslado.",
+    "especialidad": "Medicina Familiar",
+    "tema": "Escala Internacional de Síntomas Prostáticos (IPSS)",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.3 Escala IPSS y Cuadro 1",
+    "tipo": "unico",
+    "vineta": "Masculino de 58 años de edad, consulta por síntomas prostáticos de 5 meses de evolución. Se le aplica el cuestionario de la Escala Internacional de Síntomas Prostáticos (IPSS), obteniendo un puntaje de 14 puntos en las 7 preguntas de síntomas y de 4 puntos en la pregunta sobre calidad de vida. No presenta antecedentes de cirugía previa ni infección de vías urinarias activa. Exploración física sin alteración.",
     "reactivos": [
       {
-        "enunciado": "¿Cuál es la localización del infarto según el electrocardiograma?",
+        "enunciado": "De acuerdo con la estratificación de la escala IPSS descrita en la GPC, ¿cómo se clasifica la severidad del cuadro clínico de este paciente y cuál es la utilidad principal de la escala?",
         "opciones": [
-          "Anterior extenso",
-          "Lateral alto",
-          "Septal",
-          "Inferior"
+          "Sintomatología moderada; sirve para evaluar de forma objetiva la severidad y monitorear la respuesta al tratamiento",
+          "Sintomatología leve; determina con precisión el peso prostático en gramos",
+          "Sintomatología grave; reemplaza de forma absoluta a la flujometría urinaria",
+          "Sintomatología moderada; permite diferenciar de forma definitiva entre hiperplasia benigna y adenocarcinoma"
         ],
-        "respuesta_correcta": "D",
-        "retroalimentacion": "La elevación del segmento ST en DII, DIII y aVF corresponde a la cara inferior, irrigada habitualmente por la arteria coronaria derecha, y el descenso especular en DI y aVL confirma el patrón. La cara anterior se expresa en V1 a V6, la lateral alta en DI y aVL, y la septal en V1 y V2. Ante un infarto inferior conviene además registrar derivaciones derechas para descartar extensión al ventrículo derecho, lo que cambia el manejo de líquidos y contraindica los nitratos.",
+        "respuesta_correcta": "A",
+        "retroalimentacion": "Un puntaje de IPSS entre 8 y 19 puntos clasifica la enfermedad como sintomatología moderada (1-7 leve, 20-35 grave). Su función es evaluar cuantitativamente la severidad y dar seguimiento a la eficacia terapéutica, aunque la GPC señala expresamente que el IPSS no se correlaciona con el volumen prostático ni distingue entre patologías. La opción B afirma falsamente que es leve y mide el peso prostático. La opción C clasifica mal el puntaje como grave. La opción D le atribuye la capacidad de diagnosticar adenocarcinoma, lo cual es incorrecto.",
+        "nivel": "diagnostico"
+      }
+    ]
+  },
+  {
+    "id": "C009",
+    "especialidad": "Medicina Interna",
+    "tema": "Antígeno Prostático Específico (APE)",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.4 Diagnóstico y Cuadro 2",
+    "tipo": "seriado",
+    "vineta": "Masculino de 64 años de edad, acude a consulta por síntoma prostático moderado con IPSS de 12 puntos. A la exploración física: tacto rectal muestra próstata de aproximadamente 35 cc, lisa, fibroelástica, sin nódulos ni induración. Laboratorio: Examen General de Orina normal sin leucocitos ni nitritos; Creatinina sérica 0.9 mg/dl. Se solicita Antígeno Prostático Específico (APE) total, reportándose en 5.2 ng/ml.",
+    "reactivos": [
+      {
+        "enunciado": "Dado el valor de APE total en el rango de 4 a 10 ng/ml en este paciente con tacto rectal no sospechoso, ¿cuál es el estudio complementario indicado en la GPC para afinar la sospecha diagnóstica?",
+        "opciones": [
+          "Biopsia transrectal inmediata de próstata",
+          "Tomografía axial computarizada de pelvis",
+          "Determinación del porcentaje de APE libre y relación APE libre/total",
+          "Tratamiento empírico con quinolonas por 4 semanas"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "Ante niveles de APE total entre 4 y 10 ng/ml (zona gris), la GPC sugiere solicitar la fracción libre de APE (% APE libre) y su relación con el total para discriminar entre patología benigna y riesgo de cáncer de próstata. La biopsia transrectal (opción A) se indica de primera intención con APE >10 ng/ml o tacto rectal francamente sospechoso. La TAC (opción B) no es la prueba de tamizaje/estratificación adecuada. Iniciar quinolonas sin evidencia de infección en EGO (opción D) es inadecuado.",
         "nivel": "diagnostico"
       },
       {
-        "enunciado": "¿Cuál es la estrategia de reperfusión indicada en este contexto?",
+        "enunciado": "Según la GPC, en un paciente en el rango de edad de 60 a 69 años, ¿cuál es el valor de APE que actúa como estimador de un volumen prostático mayor a 30 ml?",
         "opciones": [
-          "Trombólisis inmediata en la unidad, con traslado posterior a un centro con hemodinamia",
-          "Trasladar para angioplastia primaria aunque el tiempo exceda las 3 horas",
-          "Manejo solo con antiagregación y anticoagulación, sin reperfusión",
-          "Esperar la elevación de troponinas antes de decidir cualquier reperfusión"
+          "APE >1.5 ng/ml",
+          "APE >0.5 ng/ml",
+          "APE >4.5 ng/ml",
+          "APE >10.0 ng/ml"
         ],
         "respuesta_correcta": "A",
-        "retroalimentacion": "Cuando no es posible realizar angioplastia primaria dentro de los primeros 120 minutos desde el primer contacto médico, y el paciente tiene menos de 12 horas de evolución sin contraindicaciones, la trombólisis es la estrategia indicada, seguida de traslado a un centro con hemodinamia para angiografía. Trasladar sin reperfundir con un tiempo de 3 horas pierde miocardio viable. Omitir la reperfusión aumenta la mortalidad. Esperar troponinas retrasa el tratamiento en un paciente cuyo electrocardiograma ya es diagnóstico.",
+        "retroalimentacion": "De acuerdo con la GPC, los puntos de corte de APE que estiman un volumen prostático >30 ml según la edad son: >1.4 ng/ml en 50-59 años, >1.5 ng/ml en 60-69 años y >1.7 ng/ml en 70-79 años. La cifra de 0.5 ng/ml (opción B) carece de especificidad para volumen >30 ml. Las cifras de 4.5 ng/ml (opción C) y 10.0 ng/ml (opción D) superan los umbrales de estimación de volumen prostático descritos en la literatura de la guía.",
+        "nivel": "pronostico"
+      }
+    ]
+  },
+  {
+    "id": "C010",
+    "especialidad": "Medicina Familiar",
+    "tema": "Indicación de Creatinina Sérica en STUI",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.4 Diagnóstico (Creatinina Sérica)",
+    "tipo": "unico",
+    "vineta": "Masculino de 71 años de edad, hipertenso controlado, acude a evaluación por síntomas urinarios. Niega hematuria. A la exploración física: T 36.6 °C, TA 128/78 mmHg, FC 68 bpm. Abdomen blando, no se palpa globo vesical ni hay dolor en fosas renales. Niega enuresis nocturna, infecciones de vías urinarias recurrentes o antecedentes de litiasis renal. Examen general de orina normal.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con las recomendaciones específicas de la GPC respecto a los estudios de laboratorio iniciales, ¿cuál es la indicación precisa para la medición de Creatinina sérica en pacientes con STUI?",
+        "opciones": [
+          "Obligatoria en todos los pacientes sin importar su presentación clínica",
+          "Solicitar únicamente si se sospecha daño renal por vejiga palpable, enuresis, IVU recurrente o litiasis",
+          "Contraindicada de forma absoluta en mayores de 70 años",
+          "Reemplazar siempre por depuración de creatinina en orina de 24 horas"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "La GPC indica solicitar Creatinina sérica durante la evaluación inicial de un paciente con STUI solo si existe sospecha clínica de compromiso o daño renal (por ejemplo presencia de vejiga palpable, enuresis nocturna, infecciones de vías urinarias recurrentes o antecedente de litiasis renal). La opción A promueve un estudio rutinario no justificado en ausencia de datos de sospecha renal. La opción C es totalmente falsa. La opción D solicita un estudio de orina de 24 horas innecesario de primera línea.",
+        "nivel": "diagnostico"
+      }
+    ]
+  },
+  {
+    "id": "C011",
+    "especialidad": "Medicina Familiar",
+    "tema": "Vigilancia Expectante y Estilo de Vida",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.5 Vigilancia Expectante",
+    "tipo": "unico",
+    "vineta": "Masculino de 52 años de edad, acude por presentar leve disminución del chorro urinario y nicturia de 1 vez por noche desde hace 4 meses. Niega incontinencia o dolor. Se le realiza IPSS obteniendo un puntaje total de 5 puntos con una calificación de calidad de vida de 1. Examen rectal digital: próstata lisa, fibroelástica, de aprox. 25 cc. Examen general de orina normal, APE de 0.9 ng/ml.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es el manejo inicial de elección recomendado por la GPC para este paciente?",
+        "opciones": [
+          "Tamsulosina 0.4 mg al día",
+          "Finasteride 5 mg al día",
+          "Resección transuretral de próstata preventiva",
+          "Vigilancia expectante activa acompañada de consejería en modificaciones del estilo de vida"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "En pacientes con STUI leves (IPSS <8) y sin un impacto significativo en la calidad de vida, la GPC recomienda la vigilancia expectante (activa) combinada con consejería sobre estilo de vida. La Tamsulosina (opción A) o el Finasteride (opción B) se reservan para sintomatología moderada a severa. La RTUP (opción C) es una intervención quirúrgica mayor no indicada en síntomas leves.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C012",
+    "especialidad": "Medicina Familiar",
+    "tema": "Criterios de Referencia a Segundo Nivel",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.6 Referencia a Segundo Nivel de Atención",
+    "tipo": "unico",
+    "vineta": "Masculino de 67 años de edad, diagnosticado con crecimiento prostático benigno, en tratamiento activo con Tamsulosina 0.4 mg/día desde hace 6 meses. Acude a consulta de control donde se objetiva: IPSS de 22 puntos (sintomatología severa), residual postmiccional (PVR) medido por ultrasonido de 180 ml y creatinina sérica de 1.7 mg/dl. A la exploración física: T 36.5 °C, TA 130/80 mmHg, abdomen blando sin globo vesical palpable en este momento.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿cuál es la conducta adecuada a seguir con este paciente en el primer nivel de atención?",
+        "opciones": [
+          "Enviar a segundo nivel de atención (Urología) por presentar PVR >150 ml, IPSS severo y Creatinina >1.5 mg/dl",
+          "Aumentar la dosis de alfa-bloqueador al doble",
+          "Cambiar a fitoterapia aislada con Serenoa repens",
+          "Mantener en vigilancia de primer nivel por 12 meses más"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "El paciente reúne múltiples criterios explícitos de referencia a segundo nivel señalados en la GPC: falla al tratamiento farmacológico primario, un residuo postmiccional mayor a 150 ml, IPSS severo (>20) y Creatinina sérica >1.5 mg/dl. Aumentar la dosis de alfa-bloqueador (opción B) o retrasar el envío con vigilancia (opción D) pone en riesgo la función renal. La fitoterapia (opción C) no está recomendada por falta de evidencia de superioridad vs placebo según la GPC.",
+        "nivel": "pronostico"
+      }
+    ]
+  },
+  {
+    "id": "C013",
+    "especialidad": "Medicina Familiar",
+    "tema": "Tratamiento con Bloqueadores Alfa-1",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.7 Tratamiento Farmacológico (Bloqueadores alfa 1)",
+    "tipo": "seriado",
+    "vineta": "Masculino de 61 años de edad, acude a consulta por presentar síntomas urinarios de vaciamiento y almacenamiento de moderada intensidad, acumulando un puntaje de IPSS de 14 puntos. Ultrasonido prostático vesical reporta un volumen de próstata de 28 ml y un residual postmiccional de 35 ml. APE total de 1.1 ng/ml. Refiere que tiene programada una cirugía de cataratas por la especialidad de oftalmología en los próximos 3 meses.",
+    "reactivos": [
+      {
+        "enunciado": "¿Cuál es el grupo farmacológico de primera línea indicado por su rápido inicio de acción y qué advertencia debe hacerse respecto al antecedente quirúrgico oftalmológico?",
+        "opciones": [
+          "Finasteride; advertir riesgo de glaucoma agudo",
+          "Tolterodina; advertir riesgo de desprendimiento de retina",
+          "Bloqueador Alfa-1; advertir al oftalmólogo sobre el riesgo de síndrome de iris flácido intraoperatorio (IFIS)",
+          "Tadalafilo; advertir riesgo de edema macular"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "Los bloqueadores alfa-1 (como la Tamsulosina) representan la primera línea terapéutica en STUI moderados a severos por su rápido inicio de acción. Se debe advertir expresamente al oftalmólogo sobre su uso debido al riesgo incrementado de Síndrome de Iris Flácido Intraoperatorio (IFIS) durante la cirugía de catarata. Las opciones A, B y D mencionan fármacos no clasificados como bloqueadores alfa-1 y complicaciones oculares no asociadas con estos medicamentos.",
+        "nivel": "tratamiento"
+      },
+      {
+        "enunciado": "Con base en la evidencia de la GPC, ¿qué beneficio clínico objetivo y subjetivo se espera lograr con la monoterapia de un Bloqueador Alfa-1 en este paciente?",
+        "opciones": [
+          "Curación completa de la sintomatología en menos de 24 horas",
+          "Reducción del IPSS en un 30-40% y mejoría del flujo urinario máximo (Qmáx) en un 20-25%",
+          "Disminución del tamaño prostático en un 50% al primer mes",
+          "Incremento involuntario de la diuresis nocturna en un 100%"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "Los ensayos clínicos controlados citados en la GPC demuestran que los bloqueadores alfa-1 reducen el puntaje sintomático del IPSS en un 30-40% y aumentan el flujo urinario máximo (Qmáx) en un 20-25%. No curan la enfermedad en 24 horas (opción A), no reducen el volumen de la glándula prostática (opción C, efecto correspondiente a los inhibidores de la 5-alfa reductasa) ni aumentan la diuresis nocturna (opción D).",
+        "nivel": "pronostico"
+      }
+    ]
+  },
+  {
+    "id": "C014",
+    "especialidad": "Medicina Interna",
+    "tema": "Tratamiento con Inhibidores de la 5-Alfa Reductasa",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.7 Tratamiento Farmacológico (Inhibidores de la 5 alfa reductasa)",
+    "tipo": "unico",
+    "vineta": "Masculino de 66 años de edad, acude a consulta por síntomas prostáticos de moderada intensidad. Antecedentes: ultrasonido prostático muestra una próstata con volumen aumentado de 52 ml y residual postmiccional de 40 ml. APE total de 2.1 ng/ml. No tolera los fármacos bloqueadores alfa-1 por presentar hipotensión ortostática marcada con mareo postural recurrente. A la exploración física: TA 110/70 mmHg de pie, FC 76 bpm.",
+    "reactivos": [
+      {
+        "enunciado": "Con base en la GPC, ¿cuál es la indicación precisa para la monoterapia con un Inhibidor de la 5-Alfa Reductasa (ej. Finasteride o Dutasteride) y cuál es su beneficio a largo plazo?",
+        "opciones": [
+          "Indicado en próstatas <20 ml para rápida mejoría sintomática en 24 horas",
+          "Indicado únicamente como reemplazo de la cirugía en litiasis vesical",
+          "Indicado para revertir inmediatamente la hipotensión arterial",
+          "Indicado en próstatas >40 ml y APE elevado (>1.4-1.6 ng/ml) para reducir la retención de orina y necesidad de cirugía"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La GPC indica prescribir inhibidores de la 5-alfa reductasa en hombres con STUI moderados a severos que tengan próstatas >40 ml y APE >1.4-1.6 ng/ml, ya que reducen el riesgo relativo de retención aguda de orina (hasta en un 57-68%) y la necesidad de cirugía prostática. La opción A confunde la indicación anatómica y el tiempo de acción (requieren meses). La opción B no sustituye el manejo quirúrgico de la litiasis vesical. La opción C es una indicación ajena a la patología prostática.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C015",
+    "especialidad": "Medicina Familiar",
+    "tema": "Tratamiento con Antagonistas Muscarínicos",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.7 Tratamiento Farmacológico (Antagonistas de receptores muscarínicos)",
+    "tipo": "unico",
+    "vineta": "Masculino de 59 años de edad, en tratamiento continuo con Tamsulosina 0.4 mg/día desde hace 4 meses por crecimiento prostático (volumen prostático de 32 ml). Refiere que sus síntomas de vaciamiento mejoraron significativamente, pero persiste con polaquiuria intensa (orina cada 1.5 horas) y urgencia miccional con episodios de incontinencia de urgencia. Residual postmiccional actual medido por ultrasonido: 20 ml.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿qué grupo farmacológico está indicado adicionar para el control de los síntomas predominantemente de almacenamiento vesical?",
+        "opciones": [
+          "Adicionar un antagonista de receptores muscarínicos (ej. Tolterodina)",
+          "Adicionar un inhibidor de la 5-alfa reductasa (Finasteride)",
+          "Indicar efedrina por vía oral",
+          "Iniciar ciprofloxacino por 30 días"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "Se recomienda utilizar antagonistas de receptores muscarínicos (como Tolterodina) en hombres con STUI en quienes predominan los síntomas de almacenamiento (urgencia, polaquiuria, incontinencia) y en quienes se ha verificado un volumen residual postmiccional bajo. El Finasteride (opción B) se indica para próstatas >40 ml y no tiene efecto inmediato sobre la urgencia. La Efedrina (opción C) empeora la obstrucción vesical. Las quinolonas (opción D) no están indicadas sin infección urinaria documentada.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C016",
+    "especialidad": "Medicina Interna",
+    "tema": "Inhibidores de la 5-Fosfodiesterasa en STUI",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.7 Tratamiento Farmacológico (Inhibidores de la 5 fosfodiesterasa)",
+    "tipo": "unico",
+    "vineta": "Masculino de 55 años de edad, consulta por presentar síntomas del tracto urinario inferior de intensidad moderada (IPSS 15 puntos) asociados a disfunción eréctil concomitante de 8 meses de evolución. Exploración física: T 36.6 °C, TA 120/75 mmHg, FC 72 bpm, FR 16 rpm. Próstata de 30 cc medida a la ultrasonografía abdominal, PVR de 25 ml. APE total de 1.0 ng/ml.",
+    "reactivos": [
+      {
+        "enunciado": "Según las evidencias de la GPC, ¿cuál es el esquema farmacológico indicado que aborda eficazmente ambas condiciones clínicas de forma simultánea?",
+        "opciones": [
+          "Finasteride 5 mg cada 12 horas",
+          "Tadalafilo 5 mg una vez al día",
+          "Silodosina 8 mg cada 12 horas",
+          "Sildenafilo 100 mg cada 6 horas"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "El Tadalafilo a dosis de 5 mg diarios está recomendado para el tratamiento de hombres con STUI de moderados a severos con o sin disfunción eréctil, reduciendo el IPSS entre un 22 y 37%. Finasteride (opción A) no trata la disfunción eréctil y puede inducirla. Silodosina (opción C) trata los STUI pero no la disfunción eréctil. El Sildenafilo a dosis de 100 mg cada 6 horas (opción D) es una pauta errónea no aprobada para manejo diario continuo de STUI.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C017",
+    "especialidad": "Medicina Familiar",
+    "tema": "Análogos de Vasopresina en Poliuria Nocturna",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.7 Tratamiento Farmacológico (Análogos de la vasopresina)",
+    "tipo": "seriado",
+    "vineta": "Masculino de 69 años de edad, consulta por nicturia de 4 veces por noche desde hace 6 meses que interrumpe de forma grave su descanso. El diario miccional revela poliuria nocturna con capacidad vesical diurna normal y diuresis total de 24 horas normal. A la exploración física: T 36.5 °C, TA 122/78 mmHg, FC 70 bpm, sin datos de insuficiencia cardíaca ni edema en extremidades inferiores.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿cuál es el tratamiento farmacológico indicado para el manejo de la poliuria nocturna y cuál es la monitorización de laboratorio indispensable?",
+        "opciones": [
+          "Furosemida nocturna; monitoreo de potasio sérico",
+          "Tamsulosina; monitoreo de transaminasas",
+          "Desmopresina; monitoreo periódico de sodio sérico",
+          "Dutasterida; monitoreo de amilasa"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "La Desmopresina (análogo de vasopresina) está indicada en la GPC para el tratamiento de la poliuria nocturna aislada, requiriendo un monitoreo estricto de los niveles de sodio sérico debido al riesgo de hiponatremia dilucional en adultos mayores. La Furosemida nocturna (opción A) empeoraría la nicturia. La Tamsulosina (opción B) y Dutasterida (opción D) no son los tratamientos de primera elección para poliuria nocturna primaria sin compromiso del flujo diurno.",
+        "nivel": "tratamiento"
+      },
+      {
+        "enunciado": "Respecto al protocolo de vigilancia de la seguridad del paciente durante el tratamiento con Desmopresina, ¿en qué momentos debe realizarse la medición del electrolito sérico clave?",
+        "opciones": [
+          "Únicamente antes de iniciar la primera dosis",
+          "Cada 24 horas durante el primer mes de tratamiento",
+          "Únicamente si el paciente cae en estado de coma",
+          "Durante la primera semana de tratamiento, y posteriormente a los 3 y 6 meses"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La GPC establece como punto de buena práctica evaluar el sodio sérico durante la primera semana de tratamiento con Desmopresina, y si se mantiene en rangos normales, continuar la vigilancia a los 3 y 6 meses. La opción A no previene la hiponatremia tardía. La opción B representa un esquema excesivo no normado. La opción C condiciona la toma a una complicación grave tardía, lo cual resulta inaceptable.",
+        "nivel": "prevencion"
+      }
+    ]
+  },
+  {
+    "id": "C018",
+    "especialidad": "Cirugía General",
+    "tema": "Resección Transuretral de Próstata (RTUP)",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.8 Tratamiento Quirúrgico (RTUP)",
+    "tipo": "seriado",
+    "vineta": "Masculino de 65 años de edad, con síntomas del tracto urinario inferior severos (IPSS 24 puntos) persistentes a pesar de 12 meses de terapia combinada continua con Tamsulosina y Dutasterida. Ultrasonido transrectal y vesical: volumen prostático de 50 ml y residual postmiccional de 110 ml. APE total de 2.3 ng/ml. Sin evidencia de malignidad. El cirujano urólogo planea intervención quirúrgica de mínima invasión.",
+    "reactivos": [
+      {
+        "enunciado": "Con base en la GPC, ¿cuál es el procedimiento quirúrgico considerado como el estándar de oro para este paciente con volumen prostático entre 30 y 80 ml?",
+        "opciones": [
+          "Resección Transuretral de Próstata (RTUP) monopolar o bipolar",
+          "Prostatectomía abierta suprapúbica inmediata",
+          "Incisión Transuretral de Próstata (ITUP)",
+          "Cistostomía percutánea definitiva"
+        ],
+        "respuesta_correcta": "A",
+        "retroalimentacion": "La Resección Transuretral de Próstata (RTUP) monopolar o bipolar es el estándar quirúrgico de oro para pacientes con STUI moderados a severos con tamaño prostático de 30 a 80 ml. La prostatectomía abierta (opción B) se indica en próstatas >80 ml. La ITUP (opción C) es de elección en próstatas <30 ml sin lóbulo medio. La cistostomía (opción D) es una medida paliativa de drenaje y no un tratamiento curativo definitivo.",
+        "nivel": "tratamiento"
+      },
+      {
+        "enunciado": "Al comparar la RTUP bipolar con la RTUP monopolar, ¿cuál es la ventaja clínica principal señalada en la GPC a favor de la técnica bipolar?",
+        "opciones": [
+          "Estancia hospitalaria significativamente más prolongada",
+          "Mayor tasa de hemorragia e infecciones",
+          "Perfil de seguridad perioperatorio más favorable con menor riesgo de hiponatremia dilucional",
+          "Conversión obligatoria a cirugía abierta en más del 50% de los pacientes"
+        ],
+        "respuesta_correcta": "C",
+        "retroalimentacion": "La RTUP bipolar alcanza resultados clínicos de eficacia similares a la monopolar pero con un perfil de seguridad perioperatorio más favorable, destacando la reducción significativa del riesgo de hiponatremia dilucional (síndrome de post-RTU) al utilizar solución salina. Las opciones A, B y D atribuyen características falsas y desfavorables a la técnica bipolar.",
+        "nivel": "pronostico"
+      }
+    ]
+  },
+  {
+    "id": "C019",
+    "especialidad": "Cirugía General",
+    "tema": "Incisión Transuretral de Próstata (ITUP)",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.8 Tratamiento Quirúrgico (ITUP)",
+    "tipo": "unico",
+    "vineta": "Masculino de 48 años de edad, sin comorbilidades de importancia, acude por síntomas del tracto urinario inferior severos (IPSS 21 puntos) refractarios al manejo farmacológico con alfa-bloqueadores. Ultrasonido prostático demuestra un volumen de próstata de 22 ml sin evidencia de lóbulo medio. El paciente manifiesta como deseo prioritario preservar la función eyaculatoria y minimizar las complicaciones asociadas al procedimiento quirúrgico.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿cuál es la técnica quirúrgica de primera elección indicada en este paciente con volumen prostático menor a 30 ml sin lóbulo medio?",
+        "opciones": [
+          "Prostatectomía abierta retropúbica",
+          "Enucleación prostática con láser de Holmio",
+          "Resección transuretral monopolar amplia",
+          "Incisión Transuretral de Próstata (ITUP)"
+        ],
+        "respuesta_correcta": "D",
+        "retroalimentacion": "La Incisión Transuretral de Próstata (ITUP) es el procedimiento quirúrgico de elección en próstatas con volumen menor a 30 ml sin lóbulo medio, reduciendo las complicaciones perioperatorias y preservando con mayor frecuencia la eyaculación en pacientes jóvenes. La prostatectomía abierta (opción A) y el láser de Holmio (opción B) se reservan para próstatas >80 ml. La RTUP amplia (opción C) asocia mayor riesgo de eyaculación retrógrada innecesario en próstatas pequeñas.",
+        "nivel": "tratamiento"
+      }
+    ]
+  },
+  {
+    "id": "C020",
+    "especialidad": "Cirugía General",
+    "tema": "Prostatectomía Abierta",
+    "guia_origen": "Guía de Práctica Clínica GPC-IMSS-176-18, Sección 2.8 Tratamiento Quirúrgico (Prostatectomía abierta)",
+    "tipo": "unico",
+    "vineta": "Masculino de 73 años de edad, acude por síntomas urinarios severos, habiendo presentado retención aguda de orina en 2 ocasiones en el último mes. Ultrasonido renovesicoprostático: volumen de próstata de 105 ml, con presencia de litiasis vesical concomitante de 2.5 cm de diámetro. APE de 3.2 ng/ml. El centro hospitalario no cuenta con equipo de láser de Holmio (HoLEP) ni infraestructura de enucleación prostática.",
+    "reactivos": [
+      {
+        "enunciado": "De acuerdo con la GPC, ¿cuál es la conducta quirúrgica de elección para este paciente con volumen prostático mayor a 80 ml y litiasis vesical concomitante?",
+        "opciones": [
+          "Incisión Transuretral de Próstata (ITUP)",
+          "Prostatectomía abierta con extracción de la litiasis vesical",
+          "Resección Transuretral monopolar fraccionada en 3 tiempos",
+          "Tratamiento médico continuo con Finasteride únicamente"
+        ],
+        "respuesta_correcta": "B",
+        "retroalimentacion": "La Prostatectomía abierta (o la enucleación con láser HoLEP si está disponible) es la primera elección de tratamiento quirúrgico en hombres con próstata >80 ml e indicaciones absolutas como litiasis vesical o divertículos. La ITUP (opción A) es exclusiva de próstatas <30 ml. La RTUP monopolar en próstatas >80 ml (opción C) eleva sustancialmente el tiempo quirúrgico, el sangrado y el riesgo de hiponatremia. Mantener solo tratamiento médico (opción D) está contraindicado ante la presencia de litiasis vesical y retención recurrente.",
         "nivel": "tratamiento"
       }
     ]
