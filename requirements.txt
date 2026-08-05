@@ -1,4 +1,4 @@
-streamlit>=1.32.0
+streamlit==1.51.0
 SQLAlchemy>=2.0.25
 bcrypt>=4.1.0
 jsonschema>=4.20.0
